@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+ * Copyright (c) 2010 The Chromium Authors. All rights reserved.  Use of this
+ * source code is governed by a BSD-style license that can be found in the
+ * LICENSE file.
+-->
+<html>
+  
+<!-- Mirrored from developer.chrome.com/extensions/examples/api/idle/idle_simple/history.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jul 2020 09:26:21 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <style>
+      body {
+        width: 100%;
+        font: 13px Arial;
+      }
+    </style>
+    <script src="history.js"></script>
+  </head>
+  <body>
+    <h1>Idle API Demonstration</h1>
+    <h2>Current state</h2>
+    <p>
+      Idle threshold:
+      <select id="idle-threshold">
+        <option selected value="15">15</option>
+        <option value="30">30</option>
+        <option value="60">60</option>
+      </select>
+    <p>
+      <code>chrome.idle.queryState(<strong id="idle-set-threshold"></strong>, ...);</code> - 
+      <span id="idle-state"></span>
+    </p>
+    <p>
+      Last state change: <span id="idle-laststate"></span>
+    </p>
+    
+    <h2>Idle changes:</h2>
+    <ul id='idle-history'></ul>
+  </body>
+
+<!-- Mirrored from developer.chrome.com/extensions/examples/api/idle/idle_simple/history.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jul 2020 09:26:21 GMT -->
+</html>

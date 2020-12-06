@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+<html>
+  
+<!-- Mirrored from developer.chrome.com/apps/tts by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jul 2020 09:27:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cleartype" content="on">
+    <link type="image/ico" rel="icon" href="../../www.google.com/images/icons/product/chrome-32.png">
+
+    <link href="../static/css/out/site.css" rel="stylesheet" type="text/css">
+    <link href="../static/css/print.css" rel="stylesheet" type="text/css" media="print">
+    <link href="../static/css/prettify.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41980257-1', 'auto');
+  ga('create', 'UA-49880327-5', {'name': 'chromeDocs'});
+  ga('send', 'pageview');
+  ga('chromeDocs.send', 'pageview');
+
+</script>
+
+    <title>chrome.tts - Google Chrome</title>
+  </head>
+
+  <body>
+    <div class="gc-container">
+    <a href="#gc-pagecontent" class="element-invisible element-focusable">Skip to main content</a>
+
+    <header id="topnav" role="banner">
+      <div id="logo">
+        <a href="../index.html">
+          <img alt="Chrome: developer" src="../static/images/chrome-logo_2x.png">
+        </a>
+        <span class="collase-icon"><!-- <img src="/static/images/burger-icon.png" class="collase-icon">--></span>
+      </div>
+      <nav id="fatnav" role="navigation">
+      <ul>
+          <li class="pillar">
+            <span class="toplevel">Chrome</span>
+            <ul class="expandee">
+                <li class="submenu">Extend the Browser
+                  <ul>
+                      <li class="category">
+                        <a href="../extensions.html">
+                        What are Extensions?
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/getstarted.html">
+                        Get Started Tutorial
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/overview.html">
+                        Overview
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/manifest.html">Manifest Format</a>
+                            </li>
+                            <li><a href="../extensions/background_pages.html">Manage Events</a>
+                            </li>
+                            <li><a href="../extensions/user_interface.html">Design User Interface</a>
+                            </li>
+                            <li><a href="../extensions/content_scripts.html">Content Scripts</a>
+                            </li>
+                            <li><a href="../extensions/permission_warnings.html">Declare Permissions and Warn Users</a>
+                            </li>
+                            <li><a href="../extensions/options.html">Give Users Options</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/devguide.html">
+                        Developer Guide
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/performance.html">Reach Peak Performance</a>
+                            </li>
+                            <li><a href="../extensions/user_privacy.html">Protect User Privacy</a>
+                            </li>
+                            <li><a href="../extensions/security.html">Stay Secure</a>
+                            </li>
+                            <li><a href="../extensions/tut_debugging.html">Debugging</a>
+                            </li>
+                            <li><a href="../extensions/tut_oauth.html">OAuth</a>
+                            </li>
+                            <li><a href="../extensions/a11y.html">Accessibility</a>
+                            </li>
+                            <li><a href="../extensions/contentSecurityPolicy.html">Content Security Policy</a>
+                            </li>
+                            <li><a href="../extensions/xhr.html">Cross-Origin XHR</a>
+                            </li>
+                            <li><a href="../extensions/i18n.html">Internationalization</a>
+                            </li>
+                            <li><a href="../extensions/messaging.html">Message Passing</a>
+                            </li>
+                            <li><a href="../extensions/nativeMessaging.html">Native Messaging</a>
+                            </li>
+                            <li><a href="../extensions/match_patterns.html">Match Patterns</a>
+                            </li>
+                            <li><a href="../extensions/single_purpose.html">Extension Quality Guidelines FAQ</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/faq.html">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/faq.html">FAQ</a>
+                            </li>
+                            <li><a href="../extensions/whats_new.html">What's New?</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-extensions">Google Groups</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/tags/google-chrome-extension/info">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Web Store Publishing and Distribution
+                  <ul>
+                      <li class="category">
+                        <a href="../webstore.html">
+                        Distribution Overview
+                        </a>
+                        <ul>
+                            <li><a href="../webstore.html">Distributing Products Built for Chrome</a>
+                            </li>
+                            <li><a href="../webstore/about_webstore.html">What Is the Chrome Web Store?</a>
+                            </li>
+                            <li><a href="../webstore/overview.html">What Can You Publish?</a>
+                            </li>
+                            <li><a href="../webstore/get_started_simple.html">Tutorial: Getting Started</a>
+                            </li>
+                            <li><a href="../webstore/samples.html">Samples</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/hosting.html">
+                        Publish Extensions
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/hosting.html">Hosting and Updating</a>
+                            </li>
+                            <li><a href="../extensions/hosting_changes.html">Hosting Policy Changes</a>
+                            </li>
+                            <li><a href="../extensions/tut_analytics.html">Google Analytics</a>
+                            </li>
+                            <li><a href="../extensions/themes.html">Publishing Themes</a>
+                            </li>
+                            <li><a href="../extensions/external_extensions.html">Other Deployment Options</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/money.html">
+                        Monetizing
+                        </a>
+                        <ul>
+                            <li><a href="../webstore/money.html">Monetizing Your App</a>
+                            </li>
+                            <li><a href="../webstore/identify_user.html">Using Google Accounts</a>
+                            </li>
+                            <li><a href="../webstore/one_time_payments.html">One-Time Payments</a>
+                            </li>
+                            <li><a href="../webstore/pricing.html">Pricing</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/branding.html">
+                        Branding
+                        </a>
+                        <ul>
+                            <li><a href="../webstore/branding.html">Branding Guidelines</a>
+                            </li>
+                            <li><a href="../webstore/images.html">Supplying Images</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/best_practices.html">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../webstore/best_practices.html">Best Practices</a>
+                            </li>
+                            <li><a href="../webstore/faq.html">FAQ</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/questions/tagged/google-chrome-app">Stack Overflow</a>
+                            </li>
+                            <li><a href="../webstore/articles.html">Articles</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Mobile Chrome
+                  <ul>
+                      <li class="category">
+                        <a href="../multidevice.html">
+                        Chrome for a Multi-Device World
+                        </a>
+                        <ul>
+                            <li><a href="../multidevice/user-agent.html">User Agents</a>
+                            </li>
+                            <li><a href="../multidevice/android/customtabs.html">Chrome Custom Tabs</a>
+                            </li>
+                            <li><a href="https://developers.google.com/web/tools/chrome-devtools/iterate/device-mode/?utm_source=dcc&amp;utm_medium=redirect&amp;utm_campaign=2016q3">Mobile Emulation</a>
+                            </li>
+                            <li><a href="https://developers.google.com/web/tools/chrome-devtools/debug/remote-debugging/remote-debugging?utm_source=dcc&amp;utm_medium=redirect&amp;utm_campaign=2016q3">Remote Debugging</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/android/overview.html">
+                        Chrome for Android
+                        </a>
+                        <ul>
+                            <li><a href="../multidevice/android/overview.html">Overview</a>
+                            </li>
+                            <li><a href="../multidevice/android/intents.html">Android Intents with Chrome</a>
+                            </li>
+                            <li><a href="../multidevice/android/customtabs.html">Chrome Custom Tabs</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/webview/overview.html">
+                        Chrome WebView
+                        </a>
+                        <ul>
+                            <li><a href="../multidevice/webview/overview.html">WebView for Android</a>
+                            </li>
+                            <li><a href="../multidevice/webview/gettingstarted.html">Getting Started</a>
+                            </li>
+                            <li><a href="../multidevice/webview/pixelperfect.html">Pixel-Perfect UI</a>
+                            </li>
+                            <li><a href="../multidevice/webview/workflow.html">WebView Workflow</a>
+                            </li>
+                            <li><a href="../multidevice/webview/tipsandtricks.html">Tips &amp; Tricks</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/ios/links.html">
+                        Chrome for iOS
+                        </a>
+                        <ul>
+                            <li><a href="../multidevice/ios/links.html">Opening Links in Chrome</a>
+                            </li>
+                            <li><a href="../multidevice/user-agent.html#chrome_for_ios_user_agent">User Agent</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/faq.html">
+                        FAQ
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          <li class="pillar">
+            <span class="toplevel">Chrome OS</span>
+            <ul class="expandee">
+                <li class="submenu">Apps
+                  <ul>
+                      <li class="category">
+                        <a href="about_apps.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="about_apps.html">What Are Chrome Apps?</a>
+                            </li>
+                            <li><a href="../extensions/single_purpose.html">Extension Quality Guidelines FAQ</a>
+                            </li>
+                            <li><a href="first_app.html">Create Your First App</a>
+                            </li>
+                            <li><a href="app_architecture.html">App Architecture</a>
+                            </li>
+                            <li><a href="app_lifecycle.html">App Lifecycle</a>
+                            </li>
+                            <li><a href="contentSecurityPolicy.html">Content Security Policy</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="app_codelab_intro.html">
+                        Learn with Codelab
+                        </a>
+                        <ul>
+                            <li><a href="app_codelab_intro.html">Intro - Build Chrome App</a>
+                            </li>
+                            <li><a href="app_codelab_basics.html">1 - Create and run a Chrome App</a>
+                            </li>
+                            <li><a href="app_codelab_import_todomvc.html">2 - Import an existing web app</a>
+                            </li>
+                            <li><a href="app_codelab_alarms.html">3 - Add alarms and notifications</a>
+                            </li>
+                            <li><a href="app_codelab_webview.html">4 - Open external links with a webview</a>
+                            </li>
+                            <li><a href="app_codelab_images.html">5 - Add images from the web</a>
+                            </li>
+                            <li><a href="app_codelab_filesystem.html">6 - Export todos to the filesystem</a>
+                            </li>
+                            <li><a href="app_codelab_publish.html">7 - Publish your app</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="chrome_apps_on_mobile.html">
+                        Run Chrome Apps on Mobile
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="offline_apps.html">
+                        Develop in the Cloud
+                        </a>
+                        <ul>
+                            <li><a href="offline_apps.html">Offline First</a>
+                            </li>
+                            <li><a href="app_external.html">Handling External Content</a>
+                            </li>
+                            <li><a href="app_storage.html">Storing Data</a>
+                            </li>
+                            <li><a href="offline_storage.html">Managing Offline Storage</a>
+                            </li>
+                            <li><a href="nativeMessaging.html">Native Messaging</a>
+                            </li>
+                            <li><a href="richNotifications.html">Rich Notifications</a>
+                            </li>
+                            <li><a href="app_identity.html">User Authentication</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="app_usb.html">
+                        User Low-Level System Services
+                        </a>
+                        <ul>
+                            <li><a href="app_usb.html">USB</a>
+                            </li>
+                            <li><a href="app_serial.html">Serial</a>
+                            </li>
+                            <li><a href="app_network.html">Network Communications</a>
+                            </li>
+                            <li><a href="app_bluetooth.html">Bluetooth</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="app_frameworks.html">
+                        MVC Architecture &amp; Frameworks
+                        </a>
+                        <ul>
+                            <li><a href="app_frameworks.html">About MVC Architecture</a>
+                            </li>
+                            <li><a href="angular_framework.html">Build Apps with AngularJS</a>
+                            </li>
+                            <li><a href="sencha_framework.html">Build Apps with SenchaJS</a>
+                            </li>
+                            <li><a href="game_engines.html">Game Engines</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="publish_app.html">
+                        Distribute Apps
+                        </a>
+                        <ul>
+                            <li><a href="publish_app.html">Publish Your App</a>
+                            </li>
+                            <li><a href="../webstore/payments-iap.html">Monetize Your App</a>
+                            </li>
+                            <li><a href="../webstore/one_time_payments.html">One-Time Payments</a>
+                            </li>
+                            <li><a href="analytics.html">Analytics</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="manifest.html">
+                        Chrome Platform APIs
+                        </a>
+                        <ul>
+                            <li><a href="manifest.html">Manifest File Format</a>
+                            </li>
+                            <li><a href="tags/webview.html">Webview Tag</a>
+                            </li>
+                            <li><a href="tags/appview.html">Appview Tag</a>
+                            </li>
+                            <li><a href="api_other.html">Web APIs</a>
+                            </li>
+                            <li><a href="app_deprecated.html">Disabled Web Features</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="faq.html">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="faq.html">FAQ</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/questions/tagged/google-chrome-app">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Native Client
+                  <ul>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/native-client/overview">Technical Overview</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/nacl-and-pnacl">NaCl and PNaCl</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/migration">
+                        WebAssembly Migration Guide
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/sdk/download">
+                        Download the SDK
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/native-client/sdk/download">Download the Native Client SDK</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/sdk/examples">Examples</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/sdk/release-notes">Release Notes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/devguide/tutorial/tutorial-part1">
+                        Tutorial
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/tutorial/tutorial-part1">Part 1: Simple PNaCl Web App</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/tutorial/tutorial-part2">Part 2: SDK Build System and Chrome Apps</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/cds2014">Chrome Dev Summit 2014 - Codelabs</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/devguide/devcycle/building">
+                        Development Cycle
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/devcycle/building">Building</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/devcycle/running">Running</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/devcycle/debugging">Debugging</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/devcycle/vs-addin">Debugging with Visual Studio</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/devcycle/dynamic-loading">Dynamic Linking and Loading with GlibC</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/devguide/coding/application-structure">
+                        Coding Your Application
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/application-structure">Application Structure</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/native-client-modules">Native Client Modules</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/3D-graphics">3D Graphics</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/audio">Audio</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/file-io">File I/O</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/nacl_io">The nacl_io Library</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/message-system">Messaging System</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/progress-events">Progress Events</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/url-loading">URL Loading</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/view-focus-input-events">View Change, Focus, &amp; Input Events</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/devguide/distributing">
+                        Distribute Your Apps
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/c-api">
+                        Pepper API Reference
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/native-client/c-api">Pepper C API (Stable)</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/cpp-api">Pepper C++ API (Stable)</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/c-api-beta">Pepper C API (Beta)</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/cpp-api-beta">Pepper C++ API (Beta)</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/c-api-dev">Pepper C API (Dev)</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/cpp-api-dev">Pepper C++ API (Dev)</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/glossary">
+                        Additional Reference &amp; Versions
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/native-client/glossary">Glossary</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/reference/ideas">Contributor Ideas</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/reference/nacl-manifest-format">Native Client Manifest (nmf) Format</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/reference/pnacl-bitcode-manual">Contents of PNaCl Bitcode Files</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/reference/pnacl-bitcode-abi">PNaCl Bitcode Reference Manual</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/reference/pnacl-undefined-behavior">PNaCl Undefined Behavior</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/reference/pnacl-c-cpp-language-support">PNaCl C/C++ Language Support</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/reference/sandbox_internals/index">Sandbox Internals</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/reference/design-docs">Design Documents</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/native-client/faq">FAQ</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/help">Forums &amp; Issues Tracker</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/publications-and-presentations">Publications &amp; Presentations</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/community/security-contest/index">Security Contest Archive</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          <li class="pillar">
+            <span class="toplevel">Chrome APIs</span>
+            <ul class="expandee">
+                <li class="submenu">Extensions APIs
+                  <ul>
+                      <li class="category">
+                        <a href="../extensions/api_index.html">
+                        Extension APIs
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Apps APIs
+                  <ul>
+                      <li class="category">
+                        <a href="api_index.html">
+                        Apps APIs
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+        <li id="search">
+          <img src="../static/images/search.png">
+          <div class="expandee">
+      
+      <!-- override search styles set globally by site.css -->
+      <style>
+      .gsc-above-wrapper-area, .gsc-result-info {
+        font-size: 11px;
+      }
+      .gs-webResult div, .gs-result div {
+        line-height: initial;
+      }
+      .gs-webResult a, .gs-result a {
+        text-decoration: none;
+      }
+      td.gcsc-branding-img-noclear, .gcsc-branding-img-noclear a {
+        width: 51px;
+        height: 15px;
+        vertical-align: top;
+      }
+      .gsc-table-result, .gsc-thumbnail-inside, .gsc-url-top {
+        padding: 0;
+      }
+      .gsc-control-cse tr, .gsc-control-cse td, .gsc-control-cse th {
+       padding: inherit;
+       border: none;
+      }
+      .gsc-control-cse {
+        white-space: normal;
+        border: none;
+        padding: 0 1em;
+      }
+      #search .gsc-control-cse img {
+        height: inherit;
+        width: inherit;
+      }
+      .gsc-control-cse table {
+        margin: initial;
+      }
+      .gsc-control-cse * {
+        box-sizing: initial;
+        -webkit-box-sizing: initial;
+        -moz-box-sizing: initial;
+      }
+      #fatnav .expandee .gsc-control-cse a {
+       padding: 0;
+       color: inherit;
+      }
+      </style>
+      
+            <form id="chrome-docs-cse-search-form" action="https://google.com/cse">
+              <input type="search" id="chrome-docs-cse-input" name="q" placeholder="What are you looking for?">
+              <input type="hidden" name="cx" value="010997258251033819707:7owyldxmpkc" />
+              <input type="hidden" name="ie" value="UTF-8" />
+            </form>
+            <gcse:searchresults-only gname="results"></gcse:searchresults-only>
+          </div>
+        </li>
+      </ul>
+      </nav>
+          </header>
+
+    <main id="gc-pagecontent" role="main">
+
+
+<article>
+  <div itemprop="articleBody" class="api">
+    <h1>chrome.tts</h1>
+    <table class="intro" id="intro">
+      <tr>
+        <td class="title">Description:</td>
+        <td>
+            Use the <code>chrome.tts</code> API to play synthesized text-to-speech (TTS). See also the related <a href='../extensions/ttsEngine.html'>ttsEngine</a> API, which allows an extension to implement a speech engine.
+                    <br>
+        </td>
+      </tr>
+      <tr>
+        <td class="title">Availability:</td>
+        <td>
+            Since Chrome 35.
+            <br>
+        </td>
+      </tr>
+      <tr>
+        <td class="title">Permissions:</td>
+        <td>
+            <span class="code">
+            "tts"
+                    </span>
+            <br>
+        </td>
+      </tr>
+      <tr>
+        <td class="title">Learn More:</td>
+        <td>
+            <a href="https://developers.google.com/live/shows/7320022-7001/">
+            Chrome Office Hours: Text to Speech API
+                    </a>
+            <br>
+        </td>
+      </tr>
+    </table>
+    <section>
+      <h2 id="overview">Overview</h2>
+      
+      <p>Chrome provides native support for speech on Windows (using SAPI
+      5), Mac OS X, and Chrome OS, using speech synthesis capabilities
+      provided by the operating system. On all platforms, the user can
+      install extensions that register themselves as alternative speech
+      engines.</p>
+      
+      <h2 id="generating_speech">Generating speech</h2>
+      
+      <p>Call <code>speak()</code> from your extension or
+      Chrome App to speak. For example:</p>
+      
+      <pre>chrome.tts.speak('Hello, world.');</pre>
+      
+      <p>To stop speaking immediately, just call <code>stop()</code>:
+      
+      <pre>chrome.tts.stop();</pre>
+      
+      <p>You can provide options that control various properties of the speech,
+      such as its rate, pitch, and more. For example:</p>
+      
+      <pre>chrome.tts.speak('Hello, world.', {'rate': 2.0});</pre>
+      
+      <p>It's also a good idea to specify the language so that a synthesizer
+      supporting that language (and regional dialect, if applicable) is chosen.</p>
+      
+      <pre>chrome.tts.speak(
+          'Hello, world.', {'lang': 'en-US', 'rate': 2.0});</pre>
+      
+      <p>By default, each call to <code>speak()</code> interrupts any
+      ongoing speech and speaks immediately. To determine if a call would be
+      interrupting anything, you can call <code>isSpeaking()</code>.  In
+      addition, you can use the <code>enqueue</code> option to cause this
+      utterance to be added to a queue of utterances that will be spoken
+      when the current utterance has finished.</p>
+      
+      <pre>chrome.tts.speak(
+          'Speak this first.');
+      chrome.tts.speak(
+          'Speak this next, when the first sentence is done.', {'enqueue': true});
+      </pre>
+      
+      <p>A complete description of all options can be found in the
+      <a href=tts.html#method-speak>tts.speak</a> below.
+      Not all speech engines will support all options.</p>
+      
+      <p>To catch errors and make sure you're calling <code>speak()</code>
+      correctly, pass a callback function that takes no arguments. Inside
+      the callback, check
+      <a href=runtime.html#property-lastError>runtime.lastError</a>
+      to see if there were any errors.</p>
+      
+      <pre>chrome.tts.speak(
+          utterance,
+          options,
+          function() {
+            if (chrome.runtime.lastError) {
+              console.log('Error: ' + chrome.runtime.lastError.message);
+            }
+          });</pre>
+      
+      <p>The callback returns right away, before the engine has started
+      generating speech. The purpose of the callback is to alert you to
+      syntax errors in your use of the TTS API, not to catch all possible
+      errors that might occur in the process of synthesizing and outputting
+      speech. To catch these errors too, you need to use an event listener,
+      described below.</p>
+      
+      <h2 id="events">Listening to events</h2>
+      
+      <p>To get more real-time information about the status of synthesized speech,
+      pass an event listener in the options to <code>speak()</code>, like this:</p>
+      
+      <pre>chrome.tts.speak(
+          utterance,
+          {
+            onEvent: function(event) {
+              console.log('Event ' + event.type ' at position ' + event.charIndex);
+              if (event.type == 'error') {
+                console.log('Error: ' + event.errorMessage);
+              }
+            }
+          },
+          callback);</pre>
+      
+      <p>Each event includes an event type, the character index of the current
+      speech relative to the utterance, and for error events, an optional
+      error message. The event types are:</p>
+      
+      <ul>
+        <li><code>'start'</code>: The engine has started speaking the utterance.
+        <li><code>'word'</code>: A word boundary was reached. Use
+                <code>event.charIndex</code> to determine the current speech
+                position.
+        <li><code>'sentence'</code>: A sentence boundary was reached. Use
+                <code>event.charIndex</code> to determine the current speech
+                position.
+        <li><code>'marker'</code>: An SSML marker was reached. Use
+                <code>event.charIndex</code> to determine the current speech
+                position.
+        <li><code>'end'</code>: The engine has finished speaking the utterance.
+        <li><code>'interrupted'</code>: This utterance was interrupted by another
+                call to <code>speak()</code> or <code>stop()</code> and did not
+                finish.
+        <li><code>'cancelled'</code>: This utterance was queued, but then
+                cancelled by another call to <code>speak()</code> or
+                <code>stop()</code> and never began to speak at all.
+        <li><code>'error'</code>: An engine-specific error occurred and
+                this utterance cannot be spoken.
+                Check <code>event.errorMessage</code> for details.
+      </ul>
+      
+      <p>Four of the event types&mdash;<code>'end'</code>, <code>'interrupted'</code>,
+      <code>'cancelled'</code>, and <code>'error'</code>&mdash;are <i>final</i>.
+      After one of those events is received, this utterance will no longer
+      speak and no new events from this utterance will be received.</p>
+      
+      <p>Some voices may not support all event types, and some voices may not
+      send any events at all. If you do not want to use a voice unless it sends
+      certain events, pass the events you require in the
+      <code>requiredEventTypes</code> member of the options object, or use
+      <code>getVoices()</code> to choose a voice that meets your requirements.
+      Both are documented below.</p>
+      
+      <h2 id="ssml">SSML markup</h2>
+      
+      <p>Utterances used in this API may include markup using the
+      <a href="http://www.w3.org/TR/speech-synthesis">Speech Synthesis Markup
+      Language (SSML)</a>. If you use SSML, the first argument to
+      <code>speak()</code> should be a complete SSML document with an XML
+      header and a top-level <code>&lt;speak&gt;</code> tag, not a document
+      fragment.</p>
+      
+      <p>For example:</p>
+      
+      <pre>chrome.tts.speak(
+          '&lt;?xml version="1.0"?&gt;' +
+          '&lt;speak&gt;' +
+          '  The &lt;emphasis&gt;second&lt;/emphasis&gt; ' +
+          '  word of this sentence was emphasized.' +
+          '&lt;/speak&gt;');</pre>
+      
+      <p>Not all speech engines will support all SSML tags, and some may not support
+      SSML at all, but all engines are required to ignore any SSML they don't
+      support and to still speak the underlying text.</p>
+      
+      <h2 id="choosing_voice">Choosing a voice</h2>
+      
+      <p>By default, Chrome chooses the most appropriate voice for each
+      utterance you want to speak, based on the language. On most
+      Windows, Mac OS X, and Chrome OS systems, speech synthesis provided by
+      the operating system should be able to speak any text in at least one
+      language. Some users may have a variety of voices available, though,
+      from their operating system and from speech engines implemented by other
+      Chrome extensions. In those cases, you can implement custom code to choose
+      the appropriate voice, or to present the user with a list of choices.</p>
+      
+      <p>To get a list of all voices, call <code>getVoices()</code> and pass it
+      a function that receives an array of <code>TtsVoice</code> objects as its
+      argument:</p>
+      
+      <pre>chrome.tts.getVoices(
+          function(voices) {
+            for (var i = 0; i < voices.length; i++) {
+              console.log('Voice ' + i + ':');
+              console.log('  name: ' + voices[i].voiceName);
+              console.log('  lang: ' + voices[i].lang);
+              console.log('  extension id: ' + voices[i].extensionId);
+              console.log('  event types: ' + voices[i].eventTypes);
+            }
+          });</pre>
+    </section>
+    <section id="toc">
+    <h2>Summary</h2>
+    <table class="api-summary">
+      <tr>
+        <tr><th colspan="2">Types</th></tr>
+          <tr><td><a href="#type-EventType">EventType</a></td></tr>
+          <tr><td><a href="#type-VoiceGender">VoiceGender</a></td></tr>
+          <tr><td><a href="#type-TtsOptions">TtsOptions</a></td></tr>
+          <tr><td><a href="#type-TtsEvent">TtsEvent</a></td></tr>
+          <tr><td><a href="#type-TtsVoice">TtsVoice</a></td></tr>
+        <tr><th colspan="2">Methods</th></tr>
+        <tr><td><a href="#method-speak">speak</a> &minus;
+            <code class="prettyprint">
+            chrome.tts.speak(<span>string utterance</span>, <span class="optional">    TtsOptions options</span>, <span class="optional">function callback</span>)
+            </code>
+          </td></tr>
+        <tr><td><a href="#method-stop">stop</a> &minus;
+            <code class="prettyprint">
+            chrome.tts.stop()
+            </code>
+          </td></tr>
+        <tr><td><a href="#method-pause">pause</a> &minus;
+            <code class="prettyprint">
+            chrome.tts.pause()
+            </code>
+          </td></tr>
+        <tr><td><a href="#method-resume">resume</a> &minus;
+            <code class="prettyprint">
+            chrome.tts.resume()
+            </code>
+          </td></tr>
+        <tr><td><a href="#method-isSpeaking">isSpeaking</a> &minus;
+            <code class="prettyprint">
+            chrome.tts.isSpeaking(<span class="optional">function callback</span>)
+            </code>
+          </td></tr>
+        <tr><td><a href="#method-getVoices">getVoices</a> &minus;
+            <code class="prettyprint">
+            chrome.tts.getVoices(<span class="optional">function callback</span>)
+            </code>
+          </td></tr>
+    </table>
+    </section>
+    <section>
+      <div class="api-reference">
+          <h2 id="types">Types</h2>
+            <div>
+              <h3 id="type-EventType">EventType</h3>
+              <table>
+                <tr><th>Enum</th></tr>
+                <tr><td>
+                        <code>"start"</code>, 
+                        <code>"end"</code>, 
+                        <code>"word"</code>, 
+                        <code>"sentence"</code>, 
+                        <code>"marker"</code>, 
+                        <code>"interrupted"</code>, 
+                        <code>"cancelled"</code>, 
+                        <code>"error"</code>, 
+                        <code>"pause"</code>, 
+                        or <code>"resume"</code>
+                </td></tr>
+              </table>
+            </div>
+            <div>
+              <h3 id="type-VoiceGender">VoiceGender</h3>
+              <table>
+                <tr><th>Enum</th></tr>
+                <tr><td>
+                        <code>"male"</code>, 
+                        or <code>"female"</code>
+                </td></tr>
+              </table>
+            </div>
+            <div>
+              <h3 id="type-TtsOptions">TtsOptions</h3>
+              <p class="availability">
+                Since Chrome 77.
+              </p>
+              <table>
+                <dd>The speech options for the TTS engine.</dd>
+                  <tr><th colspan="3" id="TtsOptions-properties">properties</th></tr>
+                  <tr id="property-TtsOptions-enqueue">
+                    <td>boolean</td>
+                    <td><span class="optional">(optional)</span>
+                        enqueue</td>
+                    <td>
+                    
+                    <p>
+                      If true, enqueues this utterance if TTS is already in progress. If false (the default), interrupts any current speech and flushes the speech queue before speaking this new utterance.
+                    </p></td>
+                  </tr><tr id="property-TtsOptions-voiceName">
+                    <td>string</td>
+                    <td><span class="optional">(optional)</span>
+                        voiceName</td>
+                    <td>
+                    
+                    <p>
+                      The name of the voice to use for synthesis. If empty, uses any available voice.
+                    </p></td>
+                  </tr><tr id="property-TtsOptions-extensionId">
+                    <td>string</td>
+                    <td><span class="optional">(optional)</span>
+                        extensionId</td>
+                    <td>
+                    
+                    <p>
+                      The extension ID of the speech engine to use, if known.
+                    </p></td>
+                  </tr><tr id="property-TtsOptions-lang">
+                    <td>string</td>
+                    <td><span class="optional">(optional)</span>
+                        lang</td>
+                    <td>
+                    
+                    <p>
+                      The language to be used for synthesis, in the form <em>language</em>-<em>region</em>. Examples: 'en', 'en-US', 'en-GB', 'zh-CN'.
+                    </p></td>
+                  </tr><tr id="property-TtsOptions-gender">
+                    <td>    <a href=tts.html#type-VoiceGender>VoiceGender</a></td>
+                    <td><span class="optional">(optional)</span>
+                        gender</td>
+                    <td>
+                    <p class="availability">
+                      <strong>Deprecated</strong> since Chrome 77.
+                        Gender is deprecated and will be ignored.
+                    </p>
+                    
+                    <p>
+                      Gender of voice for synthesized speech.
+                    </p></td>
+                  </tr><tr id="property-TtsOptions-rate">
+                    <td>double</td>
+                    <td><span class="optional">(optional)</span>
+                        rate</td>
+                    <td>
+                    
+                    <p>
+                      Speaking rate relative to the default rate for this voice. 1.0 is the default rate, normally around 180 to 220 words per minute. 2.0 is twice as fast, and 0.5 is half as fast. Values below 0.1 or above 10.0 are strictly disallowed, but many voices will constrain the minimum and maximum rates further&mdash;for example a particular voice may not actually speak faster than 3 times normal even if you specify a value larger than 3.0.
+                    </p></td>
+                  </tr><tr id="property-TtsOptions-pitch">
+                    <td>double</td>
+                    <td><span class="optional">(optional)</span>
+                        pitch</td>
+                    <td>
+                    
+                    <p>
+                      Speaking pitch between 0 and 2 inclusive, with 0 being lowest and 2 being highest. 1.0 corresponds to a voice's default pitch.
+                    </p></td>
+                  </tr><tr id="property-TtsOptions-volume">
+                    <td>double</td>
+                    <td><span class="optional">(optional)</span>
+                        volume</td>
+                    <td>
+                    
+                    <p>
+                      Speaking volume between 0 and 1 inclusive, with 0 being lowest and 1 being highest, with a default of 1.0.
+                    </p></td>
+                  </tr><tr id="property-TtsOptions-requiredEventTypes">
+                    <td>array of string</td>
+                    <td><span class="optional">(optional)</span>
+                        requiredEventTypes</td>
+                    <td>
+                    
+                    <p>
+                      The TTS event types the voice must support.
+                    </p></td>
+                  </tr><tr id="property-TtsOptions-desiredEventTypes">
+                    <td>array of string</td>
+                    <td><span class="optional">(optional)</span>
+                        desiredEventTypes</td>
+                    <td>
+                    
+                    <p>
+                      The TTS event types that you are interested in listening to. If missing, all event types may be sent.
+                    </p></td>
+                  </tr><tr id="property-TtsOptions-onEvent">
+                    <td>function</td>
+                    <td><span class="optional">(optional)</span>
+                        onEvent</td>
+                    <td>
+                    
+                    <p>
+                      This function is called with events that occur in the process of speaking the utterance.
+                    </p>  <table class="innerTable">
+                        <tr><th colspan="3">Parameters</th></tr>
+                        <tr id="property-onEvent-event">
+                          <td>    <a href=tts.html#type-TtsEvent>TtsEvent</a></td>
+                          <td>
+                              event</td>
+                          <td>
+                          
+                          <p>
+                            The update event from the text-to-speech engine indicating the status of this utterance.
+                          </p></td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+              </table>
+            </div>
+            <div>
+              <h3 id="type-TtsEvent">TtsEvent</h3>
+              <table>
+                <dd>An event from the TTS engine to communicate the status of an utterance.</dd>
+                  <tr><th colspan="3" id="TtsEvent-properties">properties</th></tr>
+                  <tr id="property-TtsEvent-type">
+                    <td>    <a href=tts.html#type-EventType>EventType</a></td>
+                    <td>
+                        type</td>
+                    <td>
+                    
+                    <p>
+                      The type can be <code>start</code> as soon as speech has started, <code>word</code> when a word boundary is reached, <code>sentence</code> when a sentence boundary is reached, <code>marker</code> when an SSML mark element is reached, <code>end</code> when the end of the utterance is reached, <code>interrupted</code> when the utterance is stopped or interrupted before reaching the end, <code>cancelled</code> when it's removed from the queue before ever being synthesized, or <code>error</code> when any other error occurs. When pausing speech, a <code>pause</code> event is fired if a particular utterance is paused in the middle, and <code>resume</code> if an utterance resumes speech. Note that pause and resume events may not fire if speech is paused in-between utterances.
+                    </p></td>
+                  </tr><tr id="property-TtsEvent-charIndex">
+                    <td>integer</td>
+                    <td><span class="optional">(optional)</span>
+                        charIndex</td>
+                    <td>
+                    
+                    <p>
+                      The index of the current character in the utterance. For word events, the event fires at the end of one word and before the beginning of the next. The <code>charIndex</code> represents a point in the text at the beginning of the next word to be spoken.
+                    </p></td>
+                  </tr><tr id="property-TtsEvent-errorMessage">
+                    <td>string</td>
+                    <td><span class="optional">(optional)</span>
+                        errorMessage</td>
+                    <td>
+                    
+                    <p>
+                      The error description, if the event type is <code>error</code>.
+                    </p></td>
+                  </tr><tr id="property-TtsEvent-length">
+                    <td>integer</td>
+                    <td><span class="optional">(optional)</span>
+                        length</td>
+                    <td>
+                    <p class="availability">
+                      Since Chrome 74.
+                    </p>
+                    
+                    <p>
+                      The length of the next part of the utterance. For example, in a <code>word</code> event, this is the length of the word which will be spoken next. It will be set to -1 if not set by the speech engine.
+                    </p></td>
+                  </tr>
+              </table>
+            </div>
+            <div>
+              <h3 id="type-TtsVoice">TtsVoice</h3>
+              <table>
+                <dd>A description of a voice available for speech synthesis.</dd>
+                  <tr><th colspan="3" id="TtsVoice-properties">properties</th></tr>
+                  <tr id="property-TtsVoice-voiceName">
+                    <td>string</td>
+                    <td><span class="optional">(optional)</span>
+                        voiceName</td>
+                    <td>
+                    
+                    <p>
+                      The name of the voice.
+                    </p></td>
+                  </tr><tr id="property-TtsVoice-lang">
+                    <td>string</td>
+                    <td><span class="optional">(optional)</span>
+                        lang</td>
+                    <td>
+                    
+                    <p>
+                      The language that this voice supports, in the form <em>language</em>-<em>region</em>. Examples: 'en', 'en-US', 'en-GB', 'zh-CN'.
+                    </p></td>
+                  </tr><tr id="property-TtsVoice-gender">
+                    <td>    <a href=tts.html#type-VoiceGender>VoiceGender</a></td>
+                    <td><span class="optional">(optional)</span>
+                        gender</td>
+                    <td>
+                    <p class="availability">
+                      <strong>Deprecated</strong> since Chrome 70.
+                        Gender is deprecated and will be ignored.
+                    </p>
+                    
+                    <p>
+                      This voice's gender.
+                    </p></td>
+                  </tr><tr id="property-TtsVoice-remote">
+                    <td>boolean</td>
+                    <td><span class="optional">(optional)</span>
+                        remote</td>
+                    <td>
+                    
+                    <p>
+                      If true, the synthesis engine is a remote network resource. It may be higher latency and may incur bandwidth costs.
+                    </p></td>
+                  </tr><tr id="property-TtsVoice-extensionId">
+                    <td>string</td>
+                    <td><span class="optional">(optional)</span>
+                        extensionId</td>
+                    <td>
+                    
+                    <p>
+                      The ID of the extension providing this voice.
+                    </p></td>
+                  </tr><tr id="property-TtsVoice-eventTypes">
+                    <td>array of     <a href=tts.html#type-EventType>EventType</a></td>
+                    <td><span class="optional">(optional)</span>
+                        eventTypes</td>
+                    <td>
+                    
+                    <p>
+                      All of the callback event types that this voice is capable of sending.
+                    </p></td>
+                  </tr>
+              </table>
+            </div>
+          <h2 id="methods">Methods</h2>
+            <div>
+              <h3
+                  id="method-speak"
+                  >speak
+              </h3>
+              <div class="summary">
+              <code class="prettyprint">
+              chrome.tts.speak(<span>string utterance</span>, <span class="optional">    <a href=tts.html#type-TtsOptions>TtsOptions</a> options</span>, <span class="optional">function callback</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  Speaks text using a text-to-speech engine.
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr id="property-speak-utterance">
+                      <td>string</td>
+                      <td>
+                          utterance</td>
+                      <td>
+                      
+                      <p>
+                        The text to speak, either plain text or a complete, well-formed SSML document. Speech engines that do not support SSML will strip away the tags and speak the text. The maximum length of the text is 32,768 characters.
+                      </p></td>
+                    </tr>
+                    <tr id="property-speak-options">
+                      <td>    <a href=tts.html#type-TtsOptions>TtsOptions</a></td>
+                      <td><span class="optional">(optional)</span>
+                          options</td>
+                      <td>
+                      
+                      <p>
+                        The speech options.
+                      </p></td>
+                    </tr>
+                    <tr id="property-speak-callback">
+                      <td>function</td>
+                      <td><span class="optional">(optional)</span>
+                          callback</td>
+                      <td>
+                      
+                      <p>
+                        Called right away, before speech finishes. Check <a href=runtime.html#property-lastError>runtime.lastError</a> to make sure there were no errors. Use options.onEvent to get more detailed feedback.
+                      </p>    <p>
+                              If you specify the <em>callback</em> parameter, it should
+                              be a function that looks like this:
+                          </p>
+                        <code class="prettyprint">function() <span class="subdued">{...}</span>;</code>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-stop"
+                  >stop
+              </h3>
+              <div class="summary">
+              <code class="prettyprint">
+              chrome.tts.stop()
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  Stops any current speech and flushes the queue of any pending utterances. In addition, if speech was paused, it will now be un-paused for the next call to speak.
+                </p>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-pause"
+                  >pause
+              </h3>
+              <div class="summary">
+              <code class="prettyprint">
+              chrome.tts.pause()
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  Pauses speech synthesis, potentially in the middle of an utterance. A call to resume or stop will un-pause speech.
+                </p>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-resume"
+                  >resume
+              </h3>
+              <div class="summary">
+              <code class="prettyprint">
+              chrome.tts.resume()
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  If speech was paused, resumes speaking where it left off.
+                </p>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-isSpeaking"
+                  >isSpeaking
+              </h3>
+              <div class="summary">
+              <code class="prettyprint">
+              chrome.tts.isSpeaking(<span class="optional">function callback</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  Checks whether the engine is currently speaking. On Mac OS X, the result is true whenever the system speech engine is speaking, even if the speech wasn't initiated by Chrome.
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr id="property-isSpeaking-callback">
+                      <td>function</td>
+                      <td><span class="optional">(optional)</span>
+                          callback</td>
+                      <td>
+                      
+                          <p>
+                              If you specify the <em>callback</em> parameter, it should
+                              be a function that looks like this:
+                          </p>
+                        <code class="prettyprint">function(boolean speaking) <span class="subdued">{...}</span>;</code>
+                          <table class="innerTable">
+                            <tr id="property-callback-speaking">
+                              <td>boolean</td>
+                              <td>
+                                  speaking</td>
+                              <td>
+                              
+                              <p>
+                                True if speaking, false otherwise.
+                              </p></td>
+                            </tr>
+                          </table>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-getVoices"
+                  >getVoices
+              </h3>
+              <div class="summary">
+              <code class="prettyprint">
+              chrome.tts.getVoices(<span class="optional">function callback</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  Gets an array of all available voices.
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr id="property-getVoices-callback">
+                      <td>function</td>
+                      <td><span class="optional">(optional)</span>
+                          callback</td>
+                      <td>
+                      
+                          <p>
+                              If you specify the <em>callback</em> parameter, it should
+                              be a function that looks like this:
+                          </p>
+                        <code class="prettyprint">function(array of     <a href=tts.html#type-TtsVoice>TtsVoice</a> voices) <span class="subdued">{...}</span>;</code>
+                          <table class="innerTable">
+                            <tr id="property-callback-voices">
+                              <td>array of     <a href=tts.html#type-TtsVoice>TtsVoice</a></td>
+                              <td>
+                                  voices</td>
+                              <td>
+                              
+                              <p>
+                                Array of <a href=tts.html#type-TtsVoice>tts.TtsVoice</a> objects representing the available voices for speech synthesis.
+                              </p></td>
+                            </tr>
+                          </table>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+      </div>
+    </section>
+  </div>
+</article>
+    </main>
+    </div>
+
+    <footer id="gc-footer" role="contentinfo">
+      <div class="g-section g-tpl-50-50 gc-container">
+        <div class="g-unit g-first">
+          <nav class="links">
+            <a href="https://www.google.com/">Google</a><a href="https://developers.google.com/site-terms">Terms of Service</a><a href="http://www.google.com/intl/en/privacy/">Privacy Policy</a><a href="http://crbug.com/new" data-feedback>Report a content bug</a>
+          </nav>
+        </div>
+        <div class="g-unit g-last">
+          <div id="social-buttons">
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../static/js/fatnav.js"></script>
+    <script src="../static/js/article.js"></script>
+    <script src="../static/js/prettify.js"></script>
+    <script src="../static/js/search.js"></script>
+    <script src="../../www.gstatic.com/feedback/api.js"></script>
+    <script src="../static/js/site.js"></script>
+  </body>
+
+<!-- Mirrored from developer.chrome.com/apps/tts by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jul 2020 09:27:17 GMT -->
+</html>

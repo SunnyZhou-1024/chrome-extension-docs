@@ -1,0 +1,2302 @@
+<!DOCTYPE html>
+<html>
+  
+<!-- Mirrored from developer.chrome.com/apps/app_codelab_import_todomvc by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jul 2020 09:23:29 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cleartype" content="on">
+    <link type="image/ico" rel="icon" href="../../www.google.com/images/icons/product/chrome-32.png">
+
+    <link href="../static/css/out/site.css" rel="stylesheet" type="text/css">
+    <link href="../static/css/print.css" rel="stylesheet" type="text/css" media="print">
+    <link href="../static/css/prettify.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41980257-1', 'auto');
+  ga('create', 'UA-49880327-5', {'name': 'chromeDocs'});
+  ga('send', 'pageview');
+  ga('chromeDocs.send', 'pageview');
+
+</script>
+
+    <title>
+  Step 2:
+  Import an Existing Web App
+ - Google Chrome</title>
+  </head>
+
+  <body>
+    <div class="gc-container">
+    <a href="#gc-pagecontent" class="element-invisible element-focusable">Skip to main content</a>
+
+    <header id="topnav" role="banner">
+      <div id="logo">
+        <a href="../index.html">
+          <img alt="Chrome: developer" src="../static/images/chrome-logo_2x.png">
+        </a>
+        <span class="collase-icon"><!-- <img src="/static/images/burger-icon.png" class="collase-icon">--></span>
+      </div>
+      <nav id="fatnav" role="navigation">
+      <ul>
+          <li class="pillar">
+            <span class="toplevel">Chrome</span>
+            <ul class="expandee">
+                <li class="submenu">Extend the Browser
+                  <ul>
+                      <li class="category">
+                        <a href="../extensions.html">
+                        What are Extensions?
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/getstarted.html">
+                        Get Started Tutorial
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/overview.html">
+                        Overview
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/manifest.html">Manifest Format</a>
+                            </li>
+                            <li><a href="../extensions/background_pages.html">Manage Events</a>
+                            </li>
+                            <li><a href="../extensions/user_interface.html">Design User Interface</a>
+                            </li>
+                            <li><a href="../extensions/content_scripts.html">Content Scripts</a>
+                            </li>
+                            <li><a href="../extensions/permission_warnings.html">Declare Permissions and Warn Users</a>
+                            </li>
+                            <li><a href="../extensions/options.html">Give Users Options</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/devguide.html">
+                        Developer Guide
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/performance.html">Reach Peak Performance</a>
+                            </li>
+                            <li><a href="../extensions/user_privacy.html">Protect User Privacy</a>
+                            </li>
+                            <li><a href="../extensions/security.html">Stay Secure</a>
+                            </li>
+                            <li><a href="../extensions/tut_debugging.html">Debugging</a>
+                            </li>
+                            <li><a href="../extensions/tut_oauth.html">OAuth</a>
+                            </li>
+                            <li><a href="../extensions/a11y.html">Accessibility</a>
+                            </li>
+                            <li><a href="../extensions/contentSecurityPolicy.html">Content Security Policy</a>
+                            </li>
+                            <li><a href="../extensions/xhr.html">Cross-Origin XHR</a>
+                            </li>
+                            <li><a href="../extensions/i18n.html">Internationalization</a>
+                            </li>
+                            <li><a href="../extensions/messaging.html">Message Passing</a>
+                            </li>
+                            <li><a href="../extensions/nativeMessaging.html">Native Messaging</a>
+                            </li>
+                            <li><a href="../extensions/match_patterns.html">Match Patterns</a>
+                            </li>
+                            <li><a href="../extensions/single_purpose.html">Extension Quality Guidelines FAQ</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/faq.html">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/faq.html">FAQ</a>
+                            </li>
+                            <li><a href="../extensions/whats_new.html">What's New?</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-extensions">Google Groups</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/tags/google-chrome-extension/info">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Web Store Publishing and Distribution
+                  <ul>
+                      <li class="category">
+                        <a href="../webstore.html">
+                        Distribution Overview
+                        </a>
+                        <ul>
+                            <li><a href="../webstore.html">Distributing Products Built for Chrome</a>
+                            </li>
+                            <li><a href="../webstore/about_webstore.html">What Is the Chrome Web Store?</a>
+                            </li>
+                            <li><a href="../webstore/overview.html">What Can You Publish?</a>
+                            </li>
+                            <li><a href="../webstore/get_started_simple.html">Tutorial: Getting Started</a>
+                            </li>
+                            <li><a href="../webstore/samples.html">Samples</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/hosting.html">
+                        Publish Extensions
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/hosting.html">Hosting and Updating</a>
+                            </li>
+                            <li><a href="../extensions/hosting_changes.html">Hosting Policy Changes</a>
+                            </li>
+                            <li><a href="../extensions/tut_analytics.html">Google Analytics</a>
+                            </li>
+                            <li><a href="../extensions/themes.html">Publishing Themes</a>
+                            </li>
+                            <li><a href="../extensions/external_extensions.html">Other Deployment Options</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/money.html">
+                        Monetizing
+                        </a>
+                        <ul>
+                            <li><a href="../webstore/money.html">Monetizing Your App</a>
+                            </li>
+                            <li><a href="../webstore/identify_user.html">Using Google Accounts</a>
+                            </li>
+                            <li><a href="../webstore/one_time_payments.html">One-Time Payments</a>
+                            </li>
+                            <li><a href="../webstore/pricing.html">Pricing</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/branding.html">
+                        Branding
+                        </a>
+                        <ul>
+                            <li><a href="../webstore/branding.html">Branding Guidelines</a>
+                            </li>
+                            <li><a href="../webstore/images.html">Supplying Images</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/best_practices.html">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../webstore/best_practices.html">Best Practices</a>
+                            </li>
+                            <li><a href="../webstore/faq.html">FAQ</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/questions/tagged/google-chrome-app">Stack Overflow</a>
+                            </li>
+                            <li><a href="../webstore/articles.html">Articles</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Mobile Chrome
+                  <ul>
+                      <li class="category">
+                        <a href="../multidevice.html">
+                        Chrome for a Multi-Device World
+                        </a>
+                        <ul>
+                            <li><a href="../multidevice/user-agent.html">User Agents</a>
+                            </li>
+                            <li><a href="../multidevice/android/customtabs.html">Chrome Custom Tabs</a>
+                            </li>
+                            <li><a href="https://developers.google.com/web/tools/chrome-devtools/iterate/device-mode/?utm_source=dcc&amp;utm_medium=redirect&amp;utm_campaign=2016q3">Mobile Emulation</a>
+                            </li>
+                            <li><a href="https://developers.google.com/web/tools/chrome-devtools/debug/remote-debugging/remote-debugging?utm_source=dcc&amp;utm_medium=redirect&amp;utm_campaign=2016q3">Remote Debugging</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/android/overview.html">
+                        Chrome for Android
+                        </a>
+                        <ul>
+                            <li><a href="../multidevice/android/overview.html">Overview</a>
+                            </li>
+                            <li><a href="../multidevice/android/intents.html">Android Intents with Chrome</a>
+                            </li>
+                            <li><a href="../multidevice/android/customtabs.html">Chrome Custom Tabs</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/webview/overview.html">
+                        Chrome WebView
+                        </a>
+                        <ul>
+                            <li><a href="../multidevice/webview/overview.html">WebView for Android</a>
+                            </li>
+                            <li><a href="../multidevice/webview/gettingstarted.html">Getting Started</a>
+                            </li>
+                            <li><a href="../multidevice/webview/pixelperfect.html">Pixel-Perfect UI</a>
+                            </li>
+                            <li><a href="../multidevice/webview/workflow.html">WebView Workflow</a>
+                            </li>
+                            <li><a href="../multidevice/webview/tipsandtricks.html">Tips &amp; Tricks</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/ios/links.html">
+                        Chrome for iOS
+                        </a>
+                        <ul>
+                            <li><a href="../multidevice/ios/links.html">Opening Links in Chrome</a>
+                            </li>
+                            <li><a href="../multidevice/user-agent.html#chrome_for_ios_user_agent">User Agent</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/faq.html">
+                        FAQ
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          <li class="pillar">
+            <span class="toplevel">Chrome OS</span>
+            <ul class="expandee">
+                <li class="submenu">Apps
+                  <ul>
+                      <li class="category">
+                        <a href="about_apps.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="about_apps.html">What Are Chrome Apps?</a>
+                            </li>
+                            <li><a href="../extensions/single_purpose.html">Extension Quality Guidelines FAQ</a>
+                            </li>
+                            <li><a href="first_app.html">Create Your First App</a>
+                            </li>
+                            <li><a href="app_architecture.html">App Architecture</a>
+                            </li>
+                            <li><a href="app_lifecycle.html">App Lifecycle</a>
+                            </li>
+                            <li><a href="contentSecurityPolicy.html">Content Security Policy</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="app_codelab_intro.html">
+                        Learn with Codelab
+                        </a>
+                        <ul>
+                            <li><a href="app_codelab_intro.html">Intro - Build Chrome App</a>
+                            </li>
+                            <li><a href="app_codelab_basics.html">1 - Create and run a Chrome App</a>
+                            </li>
+                            <li><a href="app_codelab_import_todomvc.html">2 - Import an existing web app</a>
+                            </li>
+                            <li><a href="app_codelab_alarms.html">3 - Add alarms and notifications</a>
+                            </li>
+                            <li><a href="app_codelab_webview.html">4 - Open external links with a webview</a>
+                            </li>
+                            <li><a href="app_codelab_images.html">5 - Add images from the web</a>
+                            </li>
+                            <li><a href="app_codelab_filesystem.html">6 - Export todos to the filesystem</a>
+                            </li>
+                            <li><a href="app_codelab_publish.html">7 - Publish your app</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="chrome_apps_on_mobile.html">
+                        Run Chrome Apps on Mobile
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="offline_apps.html">
+                        Develop in the Cloud
+                        </a>
+                        <ul>
+                            <li><a href="offline_apps.html">Offline First</a>
+                            </li>
+                            <li><a href="app_external.html">Handling External Content</a>
+                            </li>
+                            <li><a href="app_storage.html">Storing Data</a>
+                            </li>
+                            <li><a href="offline_storage.html">Managing Offline Storage</a>
+                            </li>
+                            <li><a href="nativeMessaging.html">Native Messaging</a>
+                            </li>
+                            <li><a href="richNotifications.html">Rich Notifications</a>
+                            </li>
+                            <li><a href="app_identity.html">User Authentication</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="app_usb.html">
+                        User Low-Level System Services
+                        </a>
+                        <ul>
+                            <li><a href="app_usb.html">USB</a>
+                            </li>
+                            <li><a href="app_serial.html">Serial</a>
+                            </li>
+                            <li><a href="app_network.html">Network Communications</a>
+                            </li>
+                            <li><a href="app_bluetooth.html">Bluetooth</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="app_frameworks.html">
+                        MVC Architecture &amp; Frameworks
+                        </a>
+                        <ul>
+                            <li><a href="app_frameworks.html">About MVC Architecture</a>
+                            </li>
+                            <li><a href="angular_framework.html">Build Apps with AngularJS</a>
+                            </li>
+                            <li><a href="sencha_framework.html">Build Apps with SenchaJS</a>
+                            </li>
+                            <li><a href="game_engines.html">Game Engines</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="publish_app.html">
+                        Distribute Apps
+                        </a>
+                        <ul>
+                            <li><a href="publish_app.html">Publish Your App</a>
+                            </li>
+                            <li><a href="../webstore/payments-iap.html">Monetize Your App</a>
+                            </li>
+                            <li><a href="../webstore/one_time_payments.html">One-Time Payments</a>
+                            </li>
+                            <li><a href="analytics.html">Analytics</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="manifest.html">
+                        Chrome Platform APIs
+                        </a>
+                        <ul>
+                            <li><a href="manifest.html">Manifest File Format</a>
+                            </li>
+                            <li><a href="tags/webview.html">Webview Tag</a>
+                            </li>
+                            <li><a href="tags/appview.html">Appview Tag</a>
+                            </li>
+                            <li><a href="api_other.html">Web APIs</a>
+                            </li>
+                            <li><a href="app_deprecated.html">Disabled Web Features</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="faq.html">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="faq.html">FAQ</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/questions/tagged/google-chrome-app">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Native Client
+                  <ul>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/native-client/overview">Technical Overview</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/nacl-and-pnacl">NaCl and PNaCl</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/migration">
+                        WebAssembly Migration Guide
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/sdk/download">
+                        Download the SDK
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/native-client/sdk/download">Download the Native Client SDK</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/sdk/examples">Examples</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/sdk/release-notes">Release Notes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/devguide/tutorial/tutorial-part1">
+                        Tutorial
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/tutorial/tutorial-part1">Part 1: Simple PNaCl Web App</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/tutorial/tutorial-part2">Part 2: SDK Build System and Chrome Apps</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/cds2014">Chrome Dev Summit 2014 - Codelabs</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/devguide/devcycle/building">
+                        Development Cycle
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/devcycle/building">Building</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/devcycle/running">Running</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/devcycle/debugging">Debugging</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/devcycle/vs-addin">Debugging with Visual Studio</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/devcycle/dynamic-loading">Dynamic Linking and Loading with GlibC</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/devguide/coding/application-structure">
+                        Coding Your Application
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/application-structure">Application Structure</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/native-client-modules">Native Client Modules</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/3D-graphics">3D Graphics</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/audio">Audio</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/file-io">File I/O</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/nacl_io">The nacl_io Library</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/message-system">Messaging System</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/progress-events">Progress Events</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/url-loading">URL Loading</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/view-focus-input-events">View Change, Focus, &amp; Input Events</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/devguide/distributing">
+                        Distribute Your Apps
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/c-api">
+                        Pepper API Reference
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/native-client/c-api">Pepper C API (Stable)</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/cpp-api">Pepper C++ API (Stable)</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/c-api-beta">Pepper C API (Beta)</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/cpp-api-beta">Pepper C++ API (Beta)</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/c-api-dev">Pepper C API (Dev)</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/cpp-api-dev">Pepper C++ API (Dev)</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/glossary">
+                        Additional Reference &amp; Versions
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/native-client/glossary">Glossary</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/reference/ideas">Contributor Ideas</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/reference/nacl-manifest-format">Native Client Manifest (nmf) Format</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/reference/pnacl-bitcode-manual">Contents of PNaCl Bitcode Files</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/reference/pnacl-bitcode-abi">PNaCl Bitcode Reference Manual</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/reference/pnacl-undefined-behavior">PNaCl Undefined Behavior</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/reference/pnacl-c-cpp-language-support">PNaCl C/C++ Language Support</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/reference/sandbox_internals/index">Sandbox Internals</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/reference/design-docs">Design Documents</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/native-client/faq">FAQ</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/help">Forums &amp; Issues Tracker</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/publications-and-presentations">Publications &amp; Presentations</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/community/security-contest/index">Security Contest Archive</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          <li class="pillar">
+            <span class="toplevel">Chrome APIs</span>
+            <ul class="expandee">
+                <li class="submenu">Extensions APIs
+                  <ul>
+                      <li class="category">
+                        <a href="../extensions/api_index.html">
+                        Extension APIs
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Apps APIs
+                  <ul>
+                      <li class="category">
+                        <a href="api_index.html">
+                        Apps APIs
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+        <li id="search">
+          <img src="../static/images/search.png">
+          <div class="expandee">
+      
+      <!-- override search styles set globally by site.css -->
+      <style>
+      .gsc-above-wrapper-area, .gsc-result-info {
+        font-size: 11px;
+      }
+      .gs-webResult div, .gs-result div {
+        line-height: initial;
+      }
+      .gs-webResult a, .gs-result a {
+        text-decoration: none;
+      }
+      td.gcsc-branding-img-noclear, .gcsc-branding-img-noclear a {
+        width: 51px;
+        height: 15px;
+        vertical-align: top;
+      }
+      .gsc-table-result, .gsc-thumbnail-inside, .gsc-url-top {
+        padding: 0;
+      }
+      .gsc-control-cse tr, .gsc-control-cse td, .gsc-control-cse th {
+       padding: inherit;
+       border: none;
+      }
+      .gsc-control-cse {
+        white-space: normal;
+        border: none;
+        padding: 0 1em;
+      }
+      #search .gsc-control-cse img {
+        height: inherit;
+        width: inherit;
+      }
+      .gsc-control-cse table {
+        margin: initial;
+      }
+      .gsc-control-cse * {
+        box-sizing: initial;
+        -webkit-box-sizing: initial;
+        -moz-box-sizing: initial;
+      }
+      #fatnav .expandee .gsc-control-cse a {
+       padding: 0;
+       color: inherit;
+      }
+      </style>
+      
+            <form id="chrome-docs-cse-search-form" action="https://google.com/cse">
+              <input type="search" id="chrome-docs-cse-input" name="q" placeholder="What are you looking for?">
+              <input type="hidden" name="cx" value="010997258251033819707:7owyldxmpkc" />
+              <input type="hidden" name="ie" value="UTF-8" />
+            </form>
+            <gcse:searchresults-only gname="results"></gcse:searchresults-only>
+          </div>
+        </li>
+      </ul>
+      </nav>
+          </header>
+
+    <main id="gc-pagecontent" role="main">
+
+
+<article class="article-content">
+  <nav class="inline-site-toc no-permalink">
+    <section class="related">
+    <ol class="toc">
+        <li class=" toplevel">
+          <span>Chrome</span>
+          <ol class="toc">
+              <li class="">
+                <a href="../extensions.html">
+                  Extend the Browser
+                </a>
+                <ol class="toc">
+                    <li class="">
+                      <a href="../extensions.html">
+                      What are Extensions?
+                      </a>
+                      <ol class="toc">
+                      </ol>
+                    </li>
+                    <li class="">
+                      <a href="../extensions/getstarted.html">
+                      Get Started Tutorial
+                      </a>
+                      <ol class="toc">
+                      </ol>
+                    </li>
+                    <li class="">
+                      <a href="../extensions/overview.html">
+                      Overview
+                      </a>
+                      <ol class="toc">
+                          <li class="">
+                            <a href="../extensions/manifest.html">Manifest Format</a>
+                          </li>
+                          <li class="">
+                            <a href="../extensions/background_pages.html">Manage Events</a>
+                          </li>
+                          <li class="">
+                            <a href="../extensions/user_interface.html">Design User Interface</a>
+                          </li>
+                          <li class="">
+                            <a href="../extensions/content_scripts.html">Content Scripts</a>
+                          </li>
+                          <li class="">
+                            <a href="../extensions/permission_warnings.html">Declare Permissions and Warn Users</a>
+                          </li>
+                          <li class="">
+                            <a href="../extensions/options.html">Give Users Options</a>
+                          </li>
+                      </ol>
+                    </li>
+                    <li class="">
+                      <a href="../extensions/devguide.html">
+                      Developer Guide
+                      </a>
+                      <ol class="toc">
+                          <li class="">
+                            <a href="../extensions/performance.html">Reach Peak Performance</a>
+                          </li>
+                          <li class="">
+                            <a href="../extensions/user_privacy.html">Protect User Privacy</a>
+                          </li>
+                          <li class="">
+                            <a href="../extensions/security.html">Stay Secure</a>
+                          </li>
+                          <li class="">
+                            <a href="../extensions/tut_debugging.html">Debugging</a>
+                          </li>
+                          <li class="">
+                            <a href="../extensions/tut_oauth.html">OAuth</a>
+                          </li>
+                          <li class="">
+                            <a href="../extensions/a11y.html">Accessibility</a>
+                          </li>
+                          <li class="">
+                            <a href="../extensions/contentSecurityPolicy.html">Content Security Policy</a>
+                          </li>
+                          <li class="">
+                            <a href="../extensions/xhr.html">Cross-Origin XHR</a>
+                          </li>
+                          <li class="">
+                            <a href="../extensions/i18n.html">Internationalization</a>
+                          </li>
+                          <li class="">
+                            <a href="../extensions/messaging.html">Message Passing</a>
+                          </li>
+                          <li class="">
+                            <a href="../extensions/nativeMessaging.html">Native Messaging</a>
+                          </li>
+                          <li class="">
+                            <a href="../extensions/match_patterns.html">Match Patterns</a>
+                          </li>
+                          <li class="">
+                            <a href="../extensions/single_purpose.html">Extension Quality Guidelines FAQ</a>
+                          </li>
+                      </ol>
+                    </li>
+                    <li class="">
+                      <a href="../extensions/samples.html">
+                      Samples
+                      </a>
+                      <ol class="toc">
+                      </ol>
+                    </li>
+                    <li class="">
+                      <a href="../extensions/faq.html">
+                      Help
+                      </a>
+                      <ol class="toc">
+                          <li class="">
+                            <a href="../extensions/faq.html">FAQ</a>
+                          </li>
+                          <li class="">
+                            <a href="../extensions/whats_new.html">What's New?</a>
+                          </li>
+                          <li class="">
+                            <a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-extensions">Google Groups</a>
+                          </li>
+                          <li class="">
+                            <a href="http://stackoverflow.com/tags/google-chrome-extension/info">Stack Overflow</a>
+                          </li>
+                      </ol>
+                    </li>
+                </ol>
+              </li>
+              <li class="">
+                <a href="../webstore.html">
+                  Web Store Publishing and Distribution
+                </a>
+                <ol class="toc">
+                    <li class="">
+                      <a href="../webstore.html">
+                      Distribution Overview
+                      </a>
+                      <ol class="toc">
+                          <li class="">
+                            <a href="../webstore.html">Distributing Products Built for Chrome</a>
+                          </li>
+                          <li class="">
+                            <a href="../webstore/about_webstore.html">What Is the Chrome Web Store?</a>
+                          </li>
+                          <li class="">
+                            <a href="../webstore/overview.html">What Can You Publish?</a>
+                          </li>
+                          <li class="">
+                            <a href="../webstore/get_started_simple.html">Tutorial: Getting Started</a>
+                          </li>
+                          <li class="">
+                            <a href="../webstore/samples.html">Samples</a>
+                          </li>
+                      </ol>
+                    </li>
+                    <li class="">
+                      <a href="../extensions/hosting.html">
+                      Publish Extensions
+                      </a>
+                      <ol class="toc">
+                          <li class="">
+                            <a href="../extensions/hosting.html">Hosting and Updating</a>
+                          </li>
+                          <li class="">
+                            <a href="../extensions/hosting_changes.html">Hosting Policy Changes</a>
+                          </li>
+                          <li class="">
+                            <a href="../extensions/tut_analytics.html">Google Analytics</a>
+                          </li>
+                          <li class="">
+                            <a href="../extensions/themes.html">Publishing Themes</a>
+                          </li>
+                          <li class="">
+                            <a href="../extensions/external_extensions.html">Other Deployment Options</a>
+                          </li>
+                      </ol>
+                    </li>
+                    <li class="">
+                      <a href="../webstore/money.html">
+                      Monetizing
+                      </a>
+                      <ol class="toc">
+                          <li class="">
+                            <a href="../webstore/money.html">Monetizing Your App</a>
+                          </li>
+                          <li class="">
+                            <a href="../webstore/identify_user.html">Using Google Accounts</a>
+                          </li>
+                          <li class="">
+                            <a href="../webstore/one_time_payments.html">One-Time Payments</a>
+                          </li>
+                          <li class="">
+                            <a href="../webstore/pricing.html">Pricing</a>
+                          </li>
+                      </ol>
+                    </li>
+                    <li class="">
+                      <a href="../webstore/branding.html">
+                      Branding
+                      </a>
+                      <ol class="toc">
+                          <li class="">
+                            <a href="../webstore/branding.html">Branding Guidelines</a>
+                          </li>
+                          <li class="">
+                            <a href="../webstore/images.html">Supplying Images</a>
+                          </li>
+                      </ol>
+                    </li>
+                    <li class="">
+                      <a href="../webstore/best_practices.html">
+                      Help
+                      </a>
+                      <ol class="toc">
+                          <li class="">
+                            <a href="../webstore/best_practices.html">Best Practices</a>
+                          </li>
+                          <li class="">
+                            <a href="../webstore/faq.html">FAQ</a>
+                          </li>
+                          <li class="">
+                            <a href="http://stackoverflow.com/questions/tagged/google-chrome-app">Stack Overflow</a>
+                          </li>
+                          <li class="">
+                            <a href="../webstore/articles.html">Articles</a>
+                          </li>
+                      </ol>
+                    </li>
+                </ol>
+              </li>
+              <li class="">
+                <a href="../multidevice.html">
+                  Mobile Chrome
+                </a>
+                <ol class="toc">
+                    <li class="">
+                      <a href="../multidevice.html">
+                      Chrome for a Multi-Device World
+                      </a>
+                      <ol class="toc">
+                          <li class="">
+                            <a href="../multidevice/user-agent.html">User Agents</a>
+                          </li>
+                          <li class="">
+                            <a href="../multidevice/android/customtabs.html">Chrome Custom Tabs</a>
+                          </li>
+                          <li class="">
+                            <a href="https://developers.google.com/web/tools/chrome-devtools/iterate/device-mode/?utm_source=dcc&amp;utm_medium=redirect&amp;utm_campaign=2016q3">Mobile Emulation</a>
+                          </li>
+                          <li class="">
+                            <a href="https://developers.google.com/web/tools/chrome-devtools/debug/remote-debugging/remote-debugging?utm_source=dcc&amp;utm_medium=redirect&amp;utm_campaign=2016q3">Remote Debugging</a>
+                          </li>
+                      </ol>
+                    </li>
+                    <li class="">
+                      <a href="../multidevice/android/overview.html">
+                      Chrome for Android
+                      </a>
+                      <ol class="toc">
+                          <li class="">
+                            <a href="../multidevice/android/overview.html">Overview</a>
+                          </li>
+                          <li class="">
+                            <a href="../multidevice/android/intents.html">Android Intents with Chrome</a>
+                          </li>
+                          <li class="">
+                            <a href="../multidevice/android/customtabs.html">Chrome Custom Tabs</a>
+                          </li>
+                      </ol>
+                    </li>
+                    <li class="">
+                      <a href="../multidevice/webview/overview.html">
+                      Chrome WebView
+                      </a>
+                      <ol class="toc">
+                          <li class="">
+                            <a href="../multidevice/webview/overview.html">WebView for Android</a>
+                          </li>
+                          <li class="">
+                            <a href="../multidevice/webview/gettingstarted.html">Getting Started</a>
+                          </li>
+                          <li class="">
+                            <a href="../multidevice/webview/pixelperfect.html">Pixel-Perfect UI</a>
+                          </li>
+                          <li class="">
+                            <a href="../multidevice/webview/workflow.html">WebView Workflow</a>
+                          </li>
+                          <li class="">
+                            <a href="../multidevice/webview/tipsandtricks.html">Tips &amp; Tricks</a>
+                          </li>
+                      </ol>
+                    </li>
+                    <li class="">
+                      <a href="../multidevice/ios/links.html">
+                      Chrome for iOS
+                      </a>
+                      <ol class="toc">
+                          <li class="">
+                            <a href="../multidevice/ios/links.html">Opening Links in Chrome</a>
+                          </li>
+                          <li class="">
+                            <a href="../multidevice/user-agent.html#chrome_for_ios_user_agent">User Agent</a>
+                          </li>
+                      </ol>
+                    </li>
+                    <li class="">
+                      <a href="../multidevice/faq.html">
+                      FAQ
+                      </a>
+                      <ol class="toc">
+                      </ol>
+                    </li>
+                </ol>
+              </li>
+          </ol>
+        </li>
+        <li class="show toplevel">
+          <span>Chrome OS</span>
+          <ol class="toc">
+              <li class="show">
+                <a href="about_apps.html">
+                  Apps
+                </a>
+                <ol class="toc">
+                    <li class="">
+                      <a href="about_apps.html">
+                      Learn Basics
+                      </a>
+                      <ol class="toc">
+                          <li class="">
+                            <a href="about_apps.html">What Are Chrome Apps?</a>
+                          </li>
+                          <li class="">
+                            <a href="../extensions/single_purpose.html">Extension Quality Guidelines FAQ</a>
+                          </li>
+                          <li class="">
+                            <a href="first_app.html">Create Your First App</a>
+                          </li>
+                          <li class="">
+                            <a href="app_architecture.html">App Architecture</a>
+                          </li>
+                          <li class="">
+                            <a href="app_lifecycle.html">App Lifecycle</a>
+                          </li>
+                          <li class="">
+                            <a href="contentSecurityPolicy.html">Content Security Policy</a>
+                          </li>
+                      </ol>
+                    </li>
+                    <li class="show">
+                      <a href="app_codelab_intro.html">
+                      Learn with Codelab
+                      </a>
+                      <ol class="toc">
+                          <li class="">
+                            <a href="app_codelab_intro.html">Intro - Build Chrome App</a>
+                          </li>
+                          <li class="">
+                            <a href="app_codelab_basics.html">1 - Create and run a Chrome App</a>
+                          </li>
+                          <li class="selected">
+                            <a href="app_codelab_import_todomvc.html">2 - Import an existing web app</a>
+                          </li>
+                          <li class="">
+                            <a href="app_codelab_alarms.html">3 - Add alarms and notifications</a>
+                          </li>
+                          <li class="">
+                            <a href="app_codelab_webview.html">4 - Open external links with a webview</a>
+                          </li>
+                          <li class="">
+                            <a href="app_codelab_images.html">5 - Add images from the web</a>
+                          </li>
+                          <li class="">
+                            <a href="app_codelab_filesystem.html">6 - Export todos to the filesystem</a>
+                          </li>
+                          <li class="">
+                            <a href="app_codelab_publish.html">7 - Publish your app</a>
+                          </li>
+                      </ol>
+                    </li>
+                    <li class="">
+                      <a href="chrome_apps_on_mobile.html">
+                      Run Chrome Apps on Mobile
+                      </a>
+                      <ol class="toc">
+                      </ol>
+                    </li>
+                    <li class="">
+                      <a href="samples.html">
+                      Samples
+                      </a>
+                      <ol class="toc">
+                      </ol>
+                    </li>
+                    <li class="">
+                      <a href="offline_apps.html">
+                      Develop in the Cloud
+                      </a>
+                      <ol class="toc">
+                          <li class="">
+                            <a href="offline_apps.html">Offline First</a>
+                          </li>
+                          <li class="">
+                            <a href="app_external.html">Handling External Content</a>
+                          </li>
+                          <li class="">
+                            <a href="app_storage.html">Storing Data</a>
+                          </li>
+                          <li class="">
+                            <a href="offline_storage.html">Managing Offline Storage</a>
+                          </li>
+                          <li class="">
+                            <a href="nativeMessaging.html">Native Messaging</a>
+                          </li>
+                          <li class="">
+                            <a href="richNotifications.html">Rich Notifications</a>
+                          </li>
+                          <li class="">
+                            <a href="app_identity.html">User Authentication</a>
+                          </li>
+                      </ol>
+                    </li>
+                    <li class="">
+                      <a href="app_usb.html">
+                      User Low-Level System Services
+                      </a>
+                      <ol class="toc">
+                          <li class="">
+                            <a href="app_usb.html">USB</a>
+                          </li>
+                          <li class="">
+                            <a href="app_serial.html">Serial</a>
+                          </li>
+                          <li class="">
+                            <a href="app_network.html">Network Communications</a>
+                          </li>
+                          <li class="">
+                            <a href="app_bluetooth.html">Bluetooth</a>
+                          </li>
+                      </ol>
+                    </li>
+                    <li class="">
+                      <a href="app_frameworks.html">
+                      MVC Architecture &amp; Frameworks
+                      </a>
+                      <ol class="toc">
+                          <li class="">
+                            <a href="app_frameworks.html">About MVC Architecture</a>
+                          </li>
+                          <li class="">
+                            <a href="angular_framework.html">Build Apps with AngularJS</a>
+                          </li>
+                          <li class="">
+                            <a href="sencha_framework.html">Build Apps with SenchaJS</a>
+                          </li>
+                          <li class="">
+                            <a href="game_engines.html">Game Engines</a>
+                          </li>
+                      </ol>
+                    </li>
+                    <li class="">
+                      <a href="publish_app.html">
+                      Distribute Apps
+                      </a>
+                      <ol class="toc">
+                          <li class="">
+                            <a href="publish_app.html">Publish Your App</a>
+                          </li>
+                          <li class="">
+                            <a href="../webstore/payments-iap.html">Monetize Your App</a>
+                          </li>
+                          <li class="">
+                            <a href="../webstore/one_time_payments.html">One-Time Payments</a>
+                          </li>
+                          <li class="">
+                            <a href="analytics.html">Analytics</a>
+                          </li>
+                      </ol>
+                    </li>
+                    <li class="">
+                      <a href="manifest.html">
+                      Chrome Platform APIs
+                      </a>
+                      <ol class="toc">
+                          <li class="">
+                            <a href="manifest.html">Manifest File Format</a>
+                          </li>
+                          <li class="">
+                            <a href="tags/webview.html">Webview Tag</a>
+                          </li>
+                          <li class="">
+                            <a href="tags/appview.html">Appview Tag</a>
+                          </li>
+                          <li class="">
+                            <a href="api_other.html">Web APIs</a>
+                          </li>
+                          <li class="">
+                            <a href="app_deprecated.html">Disabled Web Features</a>
+                          </li>
+                      </ol>
+                    </li>
+                    <li class="">
+                      <a href="faq.html">
+                      Help
+                      </a>
+                      <ol class="toc">
+                          <li class="">
+                            <a href="faq.html">FAQ</a>
+                          </li>
+                          <li class="">
+                            <a href="http://stackoverflow.com/questions/tagged/google-chrome-app">Stack Overflow</a>
+                          </li>
+                      </ol>
+                    </li>
+                </ol>
+              </li>
+              <li class="">
+                <a href="https://developer.chrome.com/native-client">
+                  Native Client
+                </a>
+                <ol class="toc">
+                    <li class="">
+                      <a href="https://developer.chrome.com/native-client">
+                      Learn Basics
+                      </a>
+                      <ol class="toc">
+                          <li class="">
+                            <a href="https://developer.chrome.com/native-client/overview">Technical Overview</a>
+                          </li>
+                          <li class="">
+                            <a href="https://developer.chrome.com/native-client/nacl-and-pnacl">NaCl and PNaCl</a>
+                          </li>
+                      </ol>
+                    </li>
+                    <li class="">
+                      <a href="https://developer.chrome.com/native-client/migration">
+                      WebAssembly Migration Guide
+                      </a>
+                      <ol class="toc">
+                      </ol>
+                    </li>
+                    <li class="">
+                      <a href="https://developer.chrome.com/native-client/sdk/download">
+                      Download the SDK
+                      </a>
+                      <ol class="toc">
+                          <li class="">
+                            <a href="https://developer.chrome.com/native-client/sdk/download">Download the Native Client SDK</a>
+                          </li>
+                          <li class="">
+                            <a href="https://developer.chrome.com/native-client/sdk/examples">Examples</a>
+                          </li>
+                          <li class="">
+                            <a href="https://developer.chrome.com/native-client/sdk/release-notes">Release Notes</a>
+                          </li>
+                      </ol>
+                    </li>
+                    <li class="">
+                      <a href="https://developer.chrome.com/native-client/devguide/tutorial/tutorial-part1">
+                      Tutorial
+                      </a>
+                      <ol class="toc">
+                          <li class="">
+                            <a href="https://developer.chrome.com/native-client/devguide/tutorial/tutorial-part1">Part 1: Simple PNaCl Web App</a>
+                          </li>
+                          <li class="">
+                            <a href="https://developer.chrome.com/native-client/devguide/tutorial/tutorial-part2">Part 2: SDK Build System and Chrome Apps</a>
+                          </li>
+                          <li class="">
+                            <a href="https://developer.chrome.com/native-client/cds2014">Chrome Dev Summit 2014 - Codelabs</a>
+                          </li>
+                      </ol>
+                    </li>
+                    <li class="">
+                      <a href="https://developer.chrome.com/native-client/devguide/devcycle/building">
+                      Development Cycle
+                      </a>
+                      <ol class="toc">
+                          <li class="">
+                            <a href="https://developer.chrome.com/native-client/devguide/devcycle/building">Building</a>
+                          </li>
+                          <li class="">
+                            <a href="https://developer.chrome.com/native-client/devguide/devcycle/running">Running</a>
+                          </li>
+                          <li class="">
+                            <a href="https://developer.chrome.com/native-client/devguide/devcycle/debugging">Debugging</a>
+                          </li>
+                          <li class="">
+                            <a href="https://developer.chrome.com/native-client/devguide/devcycle/vs-addin">Debugging with Visual Studio</a>
+                          </li>
+                          <li class="">
+                            <a href="https://developer.chrome.com/native-client/devguide/devcycle/dynamic-loading">Dynamic Linking and Loading with GlibC</a>
+                          </li>
+                      </ol>
+                    </li>
+                    <li class="">
+                      <a href="https://developer.chrome.com/native-client/devguide/coding/application-structure">
+                      Coding Your Application
+                      </a>
+                      <ol class="toc">
+                          <li class="">
+                            <a href="https://developer.chrome.com/native-client/devguide/coding/application-structure">Application Structure</a>
+                          </li>
+                          <li class="">
+                            <a href="https://developer.chrome.com/native-client/devguide/coding/native-client-modules">Native Client Modules</a>
+                          </li>
+                          <li class="">
+                            <a href="https://developer.chrome.com/native-client/devguide/coding/3D-graphics">3D Graphics</a>
+                          </li>
+                          <li class="">
+                            <a href="https://developer.chrome.com/native-client/devguide/coding/audio">Audio</a>
+                          </li>
+                          <li class="">
+                            <a href="https://developer.chrome.com/native-client/devguide/coding/file-io">File I/O</a>
+                          </li>
+                          <li class="">
+                            <a href="https://developer.chrome.com/native-client/devguide/coding/nacl_io">The nacl_io Library</a>
+                          </li>
+                          <li class="">
+                            <a href="https://developer.chrome.com/native-client/devguide/coding/message-system">Messaging System</a>
+                          </li>
+                          <li class="">
+                            <a href="https://developer.chrome.com/native-client/devguide/coding/progress-events">Progress Events</a>
+                          </li>
+                          <li class="">
+                            <a href="https://developer.chrome.com/native-client/devguide/coding/url-loading">URL Loading</a>
+                          </li>
+                          <li class="">
+                            <a href="https://developer.chrome.com/native-client/devguide/coding/view-focus-input-events">View Change, Focus, &amp; Input Events</a>
+                          </li>
+                      </ol>
+                    </li>
+                    <li class="">
+                      <a href="https://developer.chrome.com/native-client/devguide/distributing">
+                      Distribute Your Apps
+                      </a>
+                      <ol class="toc">
+                      </ol>
+                    </li>
+                    <li class="">
+                      <a href="https://developer.chrome.com/native-client/c-api">
+                      Pepper API Reference
+                      </a>
+                      <ol class="toc">
+                          <li class="">
+                            <a href="https://developer.chrome.com/native-client/c-api">Pepper C API (Stable)</a>
+                          </li>
+                          <li class="">
+                            <a href="https://developer.chrome.com/native-client/cpp-api">Pepper C++ API (Stable)</a>
+                          </li>
+                          <li class="">
+                            <a href="https://developer.chrome.com/native-client/c-api-beta">Pepper C API (Beta)</a>
+                          </li>
+                          <li class="">
+                            <a href="https://developer.chrome.com/native-client/cpp-api-beta">Pepper C++ API (Beta)</a>
+                          </li>
+                          <li class="">
+                            <a href="https://developer.chrome.com/native-client/c-api-dev">Pepper C API (Dev)</a>
+                          </li>
+                          <li class="">
+                            <a href="https://developer.chrome.com/native-client/cpp-api-dev">Pepper C++ API (Dev)</a>
+                          </li>
+                      </ol>
+                    </li>
+                    <li class="">
+                      <a href="https://developer.chrome.com/native-client/glossary">
+                      Additional Reference &amp; Versions
+                      </a>
+                      <ol class="toc">
+                          <li class="">
+                            <a href="https://developer.chrome.com/native-client/glossary">Glossary</a>
+                          </li>
+                          <li class="">
+                            <a href="https://developer.chrome.com/native-client/reference/ideas">Contributor Ideas</a>
+                          </li>
+                          <li class="">
+                            <a href="https://developer.chrome.com/native-client/reference/nacl-manifest-format">Native Client Manifest (nmf) Format</a>
+                          </li>
+                          <li class="">
+                            <a href="https://developer.chrome.com/native-client/reference/pnacl-bitcode-manual">Contents of PNaCl Bitcode Files</a>
+                          </li>
+                          <li class="">
+                            <a href="https://developer.chrome.com/native-client/reference/pnacl-bitcode-abi">PNaCl Bitcode Reference Manual</a>
+                          </li>
+                          <li class="">
+                            <a href="https://developer.chrome.com/native-client/reference/pnacl-undefined-behavior">PNaCl Undefined Behavior</a>
+                          </li>
+                          <li class="">
+                            <a href="https://developer.chrome.com/native-client/reference/pnacl-c-cpp-language-support">PNaCl C/C++ Language Support</a>
+                          </li>
+                          <li class="">
+                            <a href="https://developer.chrome.com/native-client/reference/sandbox_internals/index">Sandbox Internals</a>
+                          </li>
+                          <li class="">
+                            <a href="https://developer.chrome.com/native-client/reference/design-docs">Design Documents</a>
+                          </li>
+                      </ol>
+                    </li>
+                    <li class="">
+                      <a href="https://developer.chrome.com/native-client/faq">
+                      Help
+                      </a>
+                      <ol class="toc">
+                          <li class="">
+                            <a href="https://developer.chrome.com/native-client/faq">FAQ</a>
+                          </li>
+                          <li class="">
+                            <a href="https://developer.chrome.com/native-client/help">Forums &amp; Issues Tracker</a>
+                          </li>
+                          <li class="">
+                            <a href="https://developer.chrome.com/native-client/publications-and-presentations">Publications &amp; Presentations</a>
+                          </li>
+                          <li class="">
+                            <a href="https://developer.chrome.com/native-client/community/security-contest/index">Security Contest Archive</a>
+                          </li>
+                      </ol>
+                    </li>
+                </ol>
+              </li>
+          </ol>
+        </li>
+        <li class=" toplevel">
+          <span>Chrome APIs</span>
+          <ol class="toc">
+              <li class="">
+                <a href="../extensions/api_index.html">
+                  Extensions APIs
+                </a>
+                <ol class="toc">
+                    <li class="">
+                      <a href="../extensions/api_index.html">
+                      Extension APIs
+                      </a>
+                      <ol class="toc">
+                      </ol>
+                    </li>
+                </ol>
+              </li>
+              <li class="">
+                <a href="api_index.html">
+                  Apps APIs
+                </a>
+                <ol class="toc">
+                    <li class="">
+                      <a href="api_index.html">
+                      Apps APIs
+                      </a>
+                      <ol class="toc">
+                      </ol>
+                    </li>
+                </ol>
+              </li>
+          </ol>
+        </li>
+    </ol>
+    </section>
+  </nav>
+  <div itemprop="articleBody">
+    <nav class="inline-toc no-permalink">
+      <section id="toc">
+    <h3>Contents</h3>
+    <ol class="toc">
+      <li class="toplevel"><a data-list-item href="#todomvc"
+          >Import an existing Todo app</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="#csp-compliance"
+          >Make scripts Content Security Policy (CSP) compliant</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="#convert-storage"
+          >Convert localStorage to chrome.storage.local</a>
+          <ol class="toc">
+              <li><a data-list-item href="#update-permissions"
+                     >Update app permissions</a>
+              </li>
+              <li><a data-list-item href="#get-and-set"
+                     >Learn about local.storage.set() and local.storage.get()</a>
+              </li>
+              <li><a data-list-item href="#preview-changes"
+                     >Preview required API changes</a>
+              </li>
+              <li><a data-list-item href="#retrieve-items"
+                     >Retrieve todo items</a>
+              </li>
+              <li><a data-list-item href="#save-items"
+                     >Save todos items</a>
+              </li>
+              <li><a data-list-item href="#complete-items"
+                     >Mark todo items as complete</a>
+              </li>
+              <li><a data-list-item href="#count-items"
+                     >Count todo items</a>
+              </li>
+              <li><a data-list-item href="#remove-items"
+                     >Remove todos items</a>
+              </li>
+              <li><a data-list-item href="#drop-items"
+                     >Drop all todo items</a>
+              </li>
+          </ol>
+      </li>
+      <li class="toplevel"><a data-list-item href="#launch"
+          >Launch your finished Todo app</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="#recap"
+          >For more information</a>
+      </li>
+    </ol>
+</section>
+
+    </nav>
+    <p class="caution">
+      <b>Important:</b>
+        Chrome will be removing support for Chrome Apps on all platforms.
+        Chrome browser and the Chrome Web Store will continue to support extensions.
+        <a href="https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html"><strong>Read the announcement</strong></a>
+        and learn more about
+        <a href="https://developers.chrome.com/apps/migration"><strong>migrating your app</strong></a>.
+    </p>
+<h1 id="import-existing-app">
+  <span class="h1-step">Step 2:</span>
+  Import an Existing Web App
+</h1>
+
+<p class="note">
+  <strong>Want to start fresh from here?</strong>
+  Find the previous step's code in the <a href="https://github.com/mangini/io13-codelab/archive/master.zip">reference code zip</a> under <strong><em>cheat_code > solution_for_step1</strong></em>.
+</p>
+
+<p>In this step, you will learn:</p>
+
+<ul>
+  <li>How to adapt an existing web application for the Chrome Apps platform.</li>
+  <li>How to make your app scripts Content Security Policy (CSP) compliant.</li>
+  <li>How to implement local storage using the <a href="storage.html" title="Read 'chrome.storage.local' in the Chrome developer docs">chrome.storage.local</a>.</li>
+</ul>
+
+<p>
+  <em>Estimated time to complete this step: 20 minutes.</em>
+  <br>
+  To preview what you will complete in this step, <a href="#launch">jump down to the bottom of this page &#8595;</a>.
+</p>
+
+<h2 id="todomvc">Import an existing Todo app</h2>
+
+<p>As a starting point, import the <a href="http://todomvc.com/vanilla-examples/vanillajs/">vanilla 
+JavaScript version</a> of <a href="http://todomvc.com/">TodoMVC</a>, a common benchmark app, into your project.</p>
+
+<p>We've included a version of the TodoMVC app in the
+<a href="https://github.com/mangini/io13-codelab/archive/master.zip">reference code zip</a> in the <strong><em>todomvc</em></strong> folder. 
+Copy all files (including folders) from <em>todomvc</em> into your project folder.</p>
+
+<figure>
+  <img src="../static/images/app_codelab/copy-todomvc.png" alt="Copy todomvc folder into codelab folder">
+</figure>
+
+<p>You will be asked to replace <em>index.html</em>. Go ahead and accept.</p>
+
+<figure>
+  <img src="../static/images/app_codelab/replace-index.png" alt="Replace index.html"><br>
+</figure>
+
+<p>You should now have the following file structure in your application folder:</p>
+
+<figure>
+  <img src="../static/images/app_codelab/todomvc-copied.png" alt="New project folder">
+  <figcaption>The files highlighted in blue are from the <em>todomvc</em> folder.</figcaption>
+  <!--
+  <ul>
+    <li><strong>background.js</strong> (from step 1)</li>
+    <li><strong>bower_components/</strong> (from todomvc)</li>
+    <li><strong>bower.json</strong> (from todomvc)</li>
+    <li><strong>icon_128.png</strong> (from step 1)</li>
+    <li><strong>index.html</strong> (from todomvc)</li>
+    <li><strong>js/</strong> (from todomvc)</li>
+    <li><strong>manifest.json</strong> (from step 1)</li>
+  </ul>
+  -->
+</figure>
+
+
+<p>Reload your app now (<b>right-click > Reload App</b>). You should see the basic UI but you won't be able to add todos.</p>
+
+<h2 id="csp-compliance">Make scripts Content Security Policy (CSP) compliant</h2>
+
+<p>Open the DevTools Console (<strong>right-click > Inspect Element</strong>, then select the <strong>Console</strong> tab). You will see an error about refusing to execute an inline script:</p>
+
+<figure>
+  <img src="../static/images/app_codelab/csp-console-error.png" alt="Todo app with CSP console log error">
+  <!--
+  <blockquote>
+    > Refused to execute inline script because it violates the following Content <br>
+    > Security Policy directive: "default-src 'self'". <br>
+    > Note that 'script-src' was not explicitly set, so 'default-src' is used as a <br>
+    > fallback. <br>
+    >  index.html:42
+  </blockquote> 
+  -->
+</figure>
+
+<p>Let's fix this error by making the app <a href="contentSecurityPolicy.html">Content Security Policy</a> compliant. 
+One of the most common CSP non-compliances is caused by inline JavaScript. Examples of inline JavaScript include event 
+handlers as DOM attributes (e.g. <code>&lt;button onclick=''&gt;</code>) and <code>&lt;script&gt;</code> tags with 
+content inside the HTML.</p>
+
+<p>The solution is simple: move the inline content to a new file.</p>
+
+<p>1. Near the bottom of <strong><em>index.html</em></strong>, remove the inline 
+JavaScript and instead include <em>js/bootstrap.js</em>:</p>
+
+<pre data-filename="index.html">
+&lt;script src="bower_components/director/build/director.js">&lt;/script>
+<strike>&lt;script&gt;</strike>
+<strike>  // Bootstrap app data</strike>
+<strike>  window.app = {};</strike>
+<strike>&lt;/script&gt;</strike>
+<b>&lt;script src="js/bootstrap.js"&gt;&lt;/script&gt;</b>
+&lt;script src="js/helpers.js">&lt;/script>
+&lt;script src="js/store.js">&lt;/script>
+</pre>
+
+<p>2. Create a file in the <strong><em>js</em></strong> folder named <strong><em>bootstrap.js</em></strong>. Move the previously inline code to be in this file:</p>
+
+<pre data-filename="bootstrap.js">
+// Bootstrap app data
+window.app = {};
+</pre>
+
+<p>You'll still have a non-working Todo app if you reload the app now but you're getting closer.</p>
+
+<h2 id="convert-storage">Convert localStorage to chrome.storage.local</h2>
+
+<p>If you open the DevTools Console now, the previous error should be gone. There is a new error, however, about <code>window.localStorage</code> not being available:</p>
+
+<figure>
+  <img src="../static/images/app_codelab/localStorage-console-error.png" alt="Todo app with localStorage console log error">
+  <!-- 
+  <blockquote>
+    > Uncaught window.localStorage is not available in packaged apps. Use <br>
+    > chrome.storage.local instead. store.js:21
+  </blockquote>
+  -->
+</figure>
+
+<p>Chrome Apps do not support
+<a href="http://dev.w3.org/html5/webstorage/#the-localstorage-attribute"><code>localStorage</code></a>
+as <code>localStorage</code> is synchronous. 
+Synchronous access to blocking resources (I/O) in a single-threaded runtime
+could make your app unresponsive.</p>
+
+<p>Chrome Apps have an equivalent API that can store objects asynchronously. 
+This will help avoid the sometimes costly object->string->object serialization process.</p>
+
+<p>To address the error message in our app, you need to convert <code>localStorage</code> to 
+<a href="storage.html" title="Read 'chrome.storage.local' in the Chrome developer docs">chrome.storage.local</a>.</p>
+
+<h3 id="update-permissions">Update app permissions</h3>
+
+<p>In order to use <code>chrome.storage.local</code>, you need to request the <code>storage</code> permission. In <strong><em>manifest.json</em></strong>, add <code>"storage"</code> to the <code>permissions</code> array:</p>
+
+<pre data-filename="manifest.json">
+"permissions": [<b>"storage"</b>],
+</pre>
+
+<h3 id="get-and-set">Learn about local.storage.set() and local.storage.get()</h3>
+
+<p>To save and retrieve todo items, you need to know about the <code>set()</code> and <code>get()</code> methods of the <code>chrome.storage</code> API.</p>
+
+<p>The <a href="storage.html#method-StorageArea-set" title="Read 'chrome.storage.local.set()' in the Chrome developer docs">set()</a>
+method accepts an object of key-value pairs as its first parameter. An optional callback function is the second parameter. For example:</p>
+
+<pre>
+chrome.storage.local.set({secretMessage:'Psst!',timeSet:Date.now()}, function() {
+  console.log("Secret message saved");
+}); 
+</pre>
+
+<p>The <a href="storage.html#method-StorageArea-get" title="Read 'chrome.storage.local.get()' in the Chrome developer docs">get()</a> method accepts an optional first parameter for the datastore keys you wish to retreive. A single key can be passed as a string; multiple keys can be arranged into an array of strings or a dictionary object.</p>
+
+<p>The second parameter, which is required, is a callback function. In the returned object, use the keys requested in the first parameter to access the stored values. For example:</p>
+
+<pre>
+chrome.storage.local.get(['secretMessage','timeSet'], function(data) {
+  console.log("The secret message:", data.secretMessage, "saved at:", data.timeSet);
+});
+</pre>
+
+<p>If you want to <code>get()</code> everything that is currently in <code>chrome.storage.local</code>, 
+omit the first parameter:</p>
+
+<pre>
+chrome.storage.local.get(function(data) {
+  console.log(data);
+}); 
+</pre>
+
+<p>Unlike <code>localStorage</code>, you won't be able to inspect locally stored items using the DevTools Resources panel. You can, however, interact with <code>chrome.storage</code> from the JavaScript Console like so:</p>
+
+<figure>
+  <img src="../static/images/app_codelab/get-set-in-console.png" alt="Use the Console to debug chrome.storage">
+</figure>
+
+<h3 id="preview-changes">Preview required API changes</h3>
+
+<p>Most of the remaining steps in converting the Todo app are small changes
+to the API calls. Changing all the places where <code>localStorage</code>
+is currently being used, though time-consuming and error-prone, is required.</p>
+
+<p class="note">
+  To maximize your fun with this codelab, it'll be best if you overwrite your 
+  <strong><em>store.js</em></strong>, <strong><em>controller.js</em></strong>, and <strong><em>model.js</em></strong>
+  with the ones from <strong><em>cheat_code/solution_for_step_2</em></strong> in the reference code zip.
+  <br><br>
+  Once you've done that, continue reading as we'll go over each of the changes individually.
+</p>
+
+<p>The key differences between <code>localStorage</code> and <code>chrome.storage</code> come from the async nature of <code>chrome.storage</code>:</p>
+
+<ul>
+  <li>
+    Instead of writing to <code>localStorage</code> using simple assignment, you need to use <code>chrome.storage.local.set()</code> with optional callbacks.
+<pre>
+var data = { todos: [] };
+localStorage[dbName] = JSON.stringify(data);
+</pre>
+versus
+<pre>
+var storage = {};
+storage[dbName] = { todos: [] };
+chrome.storage.local.set( storage, function() {
+  // optional callback
+});
+</pre>
+  </li>
+  <li>
+    Instead of accessing <code>localStorage[myStorageName]</code> directly, you need to use <code>chrome.storage.local.get(myStorageName,function(storage){...})</code> and then parse the returned <code>storage</code> object in the callback function.
+<pre>
+var todos = JSON.parse(localStorage[dbName]).todos;
+</pre>
+versus
+<pre>
+chrome.storage.local.get(dbName, function(storage) {
+  var todos = storage[dbName].todos;
+});
+</pre>
+  </li>
+  <li>
+    The function <code>.bind(this)</code> is used on all callbacks to ensure <code>this</code> refers to the <code>this</code> of the <code>Store</code> prototype. (More info on bound functions can be found on the MDN docs: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">Function.prototype.bind()</a>.)
+<pre>
+function Store() {
+  this.scope = 'inside Store';
+  chrome.storage.local.set( {}, function() {
+    console.log(this.scope); // outputs: 'undefined'
+  });
+}
+new Store();
+</pre>
+versus
+<pre>
+function Store() {
+  this.scope = 'inside Store';
+  chrome.storage.local.set( {}, function() {
+    console.log(this.scope); // outputs: 'inside Store'
+  }<b>.bind(this)</b>);
+}
+new Store();
+</pre>
+  </li>
+</ul>
+
+<p>Keep these key differences in mind as we cover retrieving, saving, and removing todo items in the following sections.</p>
+
+<h3 id="retrieve-items">Retrieve todo items</h3>
+
+Let's update the Todo app in order to retrieve todo items:
+
+<p>1. The <code>Store</code> constructor method takes care of initializing the Todo app with all the existing todo items from the datastore.
+The method first checks if the datastore exists.
+If it doesn't, it'll create an empty array of <code>todos</code> and save it to the datastore so there are no runtime read errors.</p>
+
+<p>In <strong><em>js/store.js</em></strong>, convert the use of <code>localStorage</code> in the constructor method to instead use 
+<code>chrome.storage.local</code>:</p>
+
+<pre data-filename="store.js">
+function Store(name, callback) {
+  var data;
+  var dbName;
+
+  callback = callback || function () {};
+  
+  dbName = this._dbName = name;
+
+  <strike>if (!localStorage[dbName]) {</strike>
+  <strike>  data = {</strike>
+  <strike>    todos: []</strike>
+  <strike>  };</strike>
+  <strike>  localStorage[dbName] = JSON.stringify(data);</strike>
+  <strike>}</strike>
+  <strike>callback.call(this, JSON.parse(localStorage[dbName]));</strike>
+
+  <b>chrome.storage.local.get(dbName, function(storage) {</b>
+  <b>  if ( dbName in storage ) {</b>
+  <b>    callback.call(this, storage[dbName].todos);</b>
+  <b>  } else {</b>
+  <b>    storage = {};</b>
+  <b>    storage[dbName] = { todos: [] };</b>
+  <b>    chrome.storage.local.set( storage, function() {</b>
+  <b>      callback.call(this, storage[dbName].todos);</b>
+  <b>    }.bind(this));</b>
+  <b>  }</b>
+  <b>}.bind(this));</b>
+}
+</pre>
+
+<p>2. The <code>find()</code> method is used when reading todos from the Model. The returned results change based on whether you are filtering by "All", "Active", or "Completed".</p>
+
+<p>Convert <code>find()</code> to use <code>chrome.storage.local</code>:</p>
+
+<pre data-filename="store.js">
+Store.prototype.find = function (query, callback) {
+  if (!callback) {
+    return;
+  }
+
+  <strike>var todos = JSON.parse(localStorage[this._dbName]).todos;</strike>
+
+  <strike>callback.call(this, todos.filter(function (todo) {</strike>
+  <b>chrome.storage.local.get(this._dbName, function(storage) {</b>
+  <b>  var todos = storage[this._dbName].todos.filter(function (todo) {</b>  
+    <b>  </b>for (var q in query) {
+    <b>  </b>   return query[q] === todo[q];
+    <b>  </b>}
+  <b>    });</b>
+  <b>  callback.call(this, todos);</b>
+  <b>}.bind(this));</b>
+  <strike>}));</strike>
+};
+</pre>
+
+<p>3. Similiar to <code>find()</code>, <code>findAll()</code> gets all todos from the Model. Convert <code>findAll()</code> to use <code>chrome.storage.local</code>:</p>
+
+<pre data-filename="store.js">
+Store.prototype.findAll = function (callback) {
+  callback = callback || function () {};
+  <strike>callback.call(this, JSON.parse(localStorage[this._dbName]).todos);</strike>
+  <b>chrome.storage.local.get(this._dbName, function(storage) {</b>
+  <b>  var todos = storage[this._dbName] && storage[this._dbName].todos || [];</b>
+  <b>  callback.call(this, todos);</b>
+  <b>}.bind(this));</b>
+};
+</pre>
+
+<h3 id="save-items">Save todos items</h3>
+
+<p>The current <code>save()</code> method presents a challenge. It depends on two async 
+operations (get and set) that operate on the whole monolithic JSON storage 
+every time. Any batch updates on more than one todo item, like "mark all todos as 
+completed", will result in a data hazard known as 
+<a href="http://en.wikipedia.org/wiki/Hazard_(computer_architecture)#Read_After_Write_.28RAW.29">Read-After-Write</a>. 
+This issue wouldn't happen if we were using a more appropriate data storage, 
+like IndexedDB, but we are trying to minimize the conversion effort for this 
+codelab.</p>
+
+<p>There are several ways to fix it so we will use this opportunity to slightly 
+refactor <code>save()</code> by taking an array of todo IDs to be updated all at once:</p>
+
+<p>1. To start off, wrap everything already inside <code>save()</code>
+with a <code>chrome.storage.local.get()</code> callback:</p>
+
+<pre data-filename="store.js">
+Store.prototype.save = function (id, updateData, callback) {
+  <b>chrome.storage.local.get(this._dbName, function(storage) {</b>
+  <b>  </b>var data = JSON.parse(localStorage[this._dbName]);
+  <b>  </b>// ...
+  <b>  </b>if (typeof id !== 'object') {
+  <b>  </b>  // ...
+  <b>  </b>}else {
+  <b>  </b>  // ...
+  <b>  </b>}
+  <b>}.bind(this));</b>
+};
+</pre>
+
+<p>2. Convert all the <code>localStorage</code> instances with <code>chrome.storage.local</code>:</p>
+
+<pre data-filename="store.js">
+Store.prototype.save = function (id, updateData, callback) {
+  chrome.storage.local.get(this._dbName, function(storage) {
+    <strike>var data = JSON.parse(localStorage[this._dbName]);</strike>
+    <b>var data = storage[this._dbName];</b>
+    var todos = data.todos;
+
+    callback = callback || function () {};
+
+    // If an ID was actually given, find the item and update each property
+    if ( typeof id !== 'object' ) {
+      // ...
+
+      <strike>localStorage[this._dbName] = JSON.stringify(data);</strike>
+      <strike>callback.call(this, JSON.parse(localStorage[this._dbName]).todos);</strike>
+      <b>chrome.storage.local.set(storage, function() {</b>
+      <b>  chrome.storage.local.get(this._dbName, function(storage) {</b>
+      <b>    callback.call(this, storage[this._dbName].todos);</b>
+      <b>  }.bind(this));</b>
+      <b>}.bind(this));</b>
+    } else {
+      callback = updateData;
+
+      updateData = id;
+
+      // Generate an ID
+      updateData.id = new Date().getTime();
+
+      <strike>localStorage[this._dbName] = JSON.stringify(data);</strike>
+      <strike>callback.call(this, [updateData]);</strike>
+      <b>chrome.storage.local.set(storage, function() {</b>
+      <b>  callback.call(this, [updateData]);</b>
+      <b>}.bind(this));</b>
+    }
+  }.bind(this));
+};
+</pre>
+
+<p>3. Then update the logic to operate on an array instead of a single item:</p>
+
+<pre data-filename="store.js">
+Store.prototype.save = function (id, updateData, callback) {
+  chrome.storage.local.get(this._dbName, function(storage) {
+    var data = storage[this._dbName];
+    var todos = data.todos;
+
+    callback = callback || function () {};
+
+    // If an ID was actually given, find the item and update each property
+    if ( typeof id !== 'object' <b>|| Array.isArray(id)</b> ) {
+      <b>var ids = [].concat( id );</b>
+      <b>ids.forEach(function(id) {</b>
+        for (var i = 0; i &lt; todos.length; i++) {
+          if (todos[i].id == id) {
+            for (var x in updateData) {
+              todos[i][x] = updateData[x];
+            }
+          }
+        }
+      <b>});</b>
+
+      chrome.storage.local.set(storage, function() {
+        chrome.storage.local.get(this._dbName, function(storage) {
+          callback.call(this, storage[this._dbName].todos);
+        }.bind(this));
+      }.bind(this));
+    } else {
+      callback = updateData;
+
+      updateData = id;
+
+      // Generate an ID
+      updateData.id = new Date().getTime();
+
+      <b>todos.push(updateData);</b>
+      chrome.storage.local.set(storage, function() {
+        callback.call(this, [updateData]);
+      }.bind(this));
+    }
+  }.bind(this));
+};
+</pre>
+
+<h3 id="complete-items">Mark todo items as complete</h3>
+
+<p>Now that app is operating on arrays, you need to change how the app handles a user clicking on the <b>Clear completed (#)</b> button:</p>
+
+<p>1. In <strong><em>controller.js</em></strong>, update <code>toggleAll()</code> to call <code>toggleComplete()</code>
+only once with an array of todos instead of marking a todo as completed 
+one by one. Also delete the call to <code>_filter()</code> since you'll be adjusting
+the <code>toggleComplete</code> <code>_filter()</code>.</p>
+
+<pre data-filename="controller.js">
+Controller.prototype.toggleAll = function (e) {
+  var completed = e.target.checked ? 1 : 0;
+  var query = 0;
+  if (completed === 0) {
+    query = 1;
+  }
+  this.model.read({ completed: query }, function (data) {
+    <b>var ids = [];</b>
+    data.forEach(function (item) {
+      <strike>this.toggleComplete(item.id, e.target, true);</strike>
+      <b>ids.push(item.id);</b>
+    }.bind(this));
+    <b>this.toggleComplete(ids, e.target, false);</b>
+  }.bind(this));
+
+  <strike>this._filter();</strike>
+};
+</pre>
+
+<p>2. Now update <code>toggleComplete()</code> to accept both a single todo or an array of todos. This includes moving <code>filter()</code> to be inside the <code>update()</code>, instead of outside.</p>
+
+<pre data-filename="controller.js">
+Controller.prototype.toggleComplete = function (<strike>id</strike> <b>ids</b>, checkbox, silent) {
+  var completed = checkbox.checked ? 1 : 0;
+  this.model.update(<strike>id</strike> <b>ids</b>, { completed: completed }, function () {
+    <b>if ( ids.constructor != Array ) {</b>
+    <b>  ids = [ ids ];</b>
+    <b>}</b>
+    <b>ids.forEach( function(id) {</b>
+      var listItem = $$('[data-id="' + id + '"]');
+      
+      if (!listItem) {
+        return;
+      }
+      
+      listItem.className = completed ? 'completed' : '';
+      
+      // In case it was toggled from an event and not by clicking the checkbox
+      listItem.querySelector('input').checked = completed;
+    <b>});</b>
+
+    <b>if (!silent) {</b>
+    <b>  this._filter();</b>
+    <b>}</b>
+
+  }<b>.bind(this)</b>);
+
+  <strike>if (!silent) {</strike>
+  <strike>  this._filter();</strike>
+  <strike>}</strike>
+};
+</pre>
+
+<h3 id="count-items">Count todo items</h3>
+
+<p>After switching to async storage, there is a minor bug that shows up when getting the number of todos. You'll need to wrap the count operation in a callback function:</p>
+
+<p>1. In <strong><em>model.js</em></strong>, update <code>getCount()</code> to accept a callback:</p>
+
+<pre data-filename="model.js">
+  Model.prototype.getCount = function (<b>callback</b>) {
+  var todos = {
+    active: 0,
+    completed: 0,
+    total: 0
+  };
+  this.storage.findAll(function (data) {
+    data.each(function (todo) {
+      if (todo.completed === 1) {
+        todos.completed++;
+      } else {
+        todos.active++;
+      }
+      todos.total++;
+    });
+    <b>if (callback) callback(todos);</b>
+  });
+  <strike>return todos;</strike>
+};
+</pre>
+
+<p>2. Back in <strong><em>controller.js</em></strong>, update <code>_updateCount()</code> to use
+the async <code>getCount()</code> you edited in the previous step:</p>
+
+<pre data-filename="controller.js">
+Controller.prototype._updateCount = function () {
+  <strike>var todos = this.model.getCount();</strike>
+  <b>this.model.getCount(function(todos) {</b>
+  <b>  </b>this.$todoItemCounter.innerHTML = this.view.itemCounter(todos.active);
+  <b>  </b>
+  <b>  </b>this.$clearCompleted.innerHTML = this.view.clearCompletedButton(todos.completed);
+  <b>  </b>this.$clearCompleted.style.display = todos.completed > 0 ? 'block' : 'none';
+  <b>  </b>
+  <b>  </b>this.$toggleAll.checked = todos.completed === todos.total;
+  <b>  </b>
+  <b>  </b>this._toggleFrame(todos);
+  <b>}.bind(this));</b>
+
+};
+</pre>
+
+<p>You are almost there! If you reload the app now, you will be able to insert new 
+todos without any console errors.</p>
+
+<h3 id="remove-items">Remove todos items</h3>
+
+<p>Now that the app can save todo items, you're close to being done!
+You still get errors when you attempt to <em>remove</em> todo items:</p>
+
+<figure>
+  <img src="../static/images/app_codelab/remove-todo-console-error.png" alt="Todo app with localStorage console log error">
+</figure>
+
+<p>1. In <strong><em>store.js</em></strong>, convert all the <code>localStorage</code> instances to use <code>chrome.storage.local</code>:</p>
+
+<p>a) To start off, wrap everything already inside <code>remove()</code> with a <code>get()</code> callback:</p>
+
+<pre data-filename="store.js">
+Store.prototype.remove = function (id, callback) {
+  <b>chrome.storage.local.get(this._dbName, function(storage) {</b>
+  <b>  </b>var data = JSON.parse(localStorage[this._dbName]);
+  <b>  </b>var todos = data.todos;
+  <b>  </b>
+  <b>  </b>for (var i = 0; i < todos.length; i++) {
+  <b>  </b>  if (todos[i].id == id) {
+  <b>  </b>    todos.splice(i, 1);
+  <b>  </b>    break;
+  <b>  </b>  }
+  <b>  </b>}
+  <b>  </b>
+  <b>  </b>localStorage[this._dbName] = JSON.stringify(data);
+  <b>  </b>callback.call(this, JSON.parse(localStorage[this._dbName]).todos);
+  <b>}.bind(this));</b>
+};
+</pre>
+
+<p>b) Then convert the contents within the <code>get()</code> callback:</p>
+
+<pre data-filename="store.js">
+Store.prototype.remove = function (id, callback) {
+  chrome.storage.local.get(this._dbName, function(storage) {
+    <strike>var data = JSON.parse(localStorage[this._dbName]);</strike>
+    <b>var data = storage[this._dbName];</b>
+    var todos = data.todos;
+
+    for (var i = 0; i &lt; todos.length; i++) {
+      if (todos[i].id == id) {
+        todos.splice(i, 1);
+        break;
+      }
+    }
+
+    <strike>localStorage[this._dbName] = JSON.stringify(data);</strike>
+    <strike>callback.call(this, JSON.parse(localStorage[this._dbName]).todos);</strike>
+    <b>chrome.storage.local.set(storage, function() {</b>
+    <b>  callback.call(this, todos);</b>
+    <b>}.bind(this));</b>
+  }.bind(this));
+};
+</pre>
+
+<p>2. The same Read-After-Write data hazard issue previously present in the 
+<code>save()</code> method is also present when removing items so you will need
+to update a few more places to allow for batch operations on a list of todo IDs.</p>
+
+<p>a) Still in <em>store.js</em>, update <code>remove()</code>:</p>
+
+<pre data-filename="store.js">
+Store.prototype.remove = function (id, callback) {
+  chrome.storage.local.get(this._dbName, function(storage) {
+    var data = storage[this._dbName];
+    var todos = data.todos;
+
+    <b>var ids = [].concat(id);</b>
+    <b>ids.forEach( function(id) {</b>
+    <b>  </b>for (var i = 0; i &lt; todos.length; i++) {
+    <b>  </b>  if (todos[i].id == id) {
+    <b>  </b>    todos.splice(i, 1);
+    <b>  </b>    break;
+    <b>  </b>  }
+    <b>  </b>}
+    <b>});</b>
+
+    chrome.storage.local.set(storage, function() {
+      callback.call(this, todos);
+    }.bind(this));
+  }.bind(this));
+};
+</pre>
+
+<p>b) In <strong><em>controller.js</em></strong>, change <code>removeCompletedItems()</code> to 
+make it call <code>removeItem()</code> on all IDs at once:</p>
+
+<pre data-filename="controller.js">
+Controller.prototype.removeCompletedItems = function () {
+  this.model.read({ completed: 1 }, function (data) {
+    <b>var ids = [];</b>
+    data.forEach(function (item) {
+      <strike>this.removeItem(item.id);</strike>
+      <b>ids.push(item.id);</b>
+    }.bind(this));
+    <b>this.removeItem(ids);</b>
+  }.bind(this));
+
+  this._filter();
+};
+</pre>
+
+<p>c) Finally, still in <em>controller.js</em>, change the <code>removeItem()</code> to support 
+   removing multiple items from the DOM at once, and move the <code>_filter()</code> call to be inside the callback:</p>
+
+<pre data-filename="controller.js">
+Controller.prototype.removeItem = function (id) {
+  this.model.remove(id, function () {
+    <b>var ids = [].concat(id);</b>
+    <b>ids.forEach( function(id) {</b>
+    <b>  </b>this.$todoList.removeChild($$('[data-id="' + id + '"]'));
+    <b>}.bind(this));</b>
+    <b>this._filter();</b>
+  }.bind(this));
+  <strike>this._filter();</strike>
+};
+</pre>
+
+<h3 id="drop-items">Drop all todo items</h3>
+
+<p>There is one more method in <em>store.js</em> using <code>localStorage</code>:</p>
+
+<pre data-filename="store.js">
+Store.prototype.drop = function (callback) {
+  localStorage[this._dbName] = JSON.stringify({todos: []});
+  callback.call(this, JSON.parse(localStorage[this._dbName]).todos);
+};
+</pre>
+
+<p>This method is not being called in the current app so, if you want an extra challenge, try implementing it on your own.
+Hint: Have a look at <code><a href="storage.html#method-StorageArea-remove">chrome.storage.local.clear()</a></code>.</p>
+
+<h2 id="launch">Launch your finished Todo app</h2>
+
+<p>You are done Step 2! Reload your app and you should now have 
+a fully working Chrome packaged version of TodoMVC.</p>
+
+<figure>
+  <img src="../static/images/app_codelab/step2-completed.html" alt="The finished Todo app after Step 2">
+</figure>
+
+<p class="note">
+  <strong>Troubleshooting</strong>
+  <br>
+  Remember to always check the DevTools Console to see if there are any error messages.
+</p>
+
+<h2 id="recap">For more information</h2>
+
+<p>For more detailed information about some of the APIs introduced in this step, refer to:</p>
+
+<ul>
+  <li>
+    <a href="contentSecurityPolicy.html" title="Read 'Content Security Policy' in the Chrome developer docs">Content Security Policy</a>
+    <a href="#csp-compliance" class="anchor-link-icon" title="This feature mentioned in 'Make scripts Content Security Policy (CSP) compliant'">&#8593;</a>
+  </li>
+  <li>
+    <a href="declare_permissions.html" title="Read 'Declare Permissions' in the Chrome developer docs">Declare Permissions</a>
+    <a href="#update-permissions" class="anchor-link-icon" title="This feature mentioned in 'Update app permissions'">&#8593;</a>
+  </li>
+  <li>
+    <a href="storage.html" title="Read 'chrome.storage' in the Chrome developer docs">chrome.storage</a>
+    <a href="#get-and-set" class="anchor-link-icon" title="This feature mentioned in 'Learn about local.storage.set() and local.storage.get()'">&#8593;</a>
+  </li>
+  <li>
+    <a href="storage.html#method-StorageArea-get" title="Read 'chrome.storage.local.get()' in the Chrome developer docs">chrome.storage.local.get()</a>
+    <a href="#retrieve-items" class="anchor-link-icon" title="This feature mentioned in 'Retrieve todos items'">&#8593;</a>
+  </li>
+  <li>
+    <a href="storage.html#method-StorageArea-set" title="Read 'chrome.storage.local.set()' in the Chrome developer docs">chrome.storage.local.set()</a>
+    <a href="#save-items" class="anchor-link-icon" title="This feature mentioned in 'Save todos items'">&#8593;</a>
+  </li>
+  <li>
+    <a href="storage.html#method-StorageArea-remove" title="Read 'chrome.storage.local.remove()' in the Chrome developer docs">chrome.storage.local.remove()</a> 
+    <a href="#remove-items" class="anchor-link-icon" title="This feature mentioned in 'Remove todos items'">&#8593;</a>
+  </li>
+  <li>
+    <a href="storage.html#method-StorageArea-remove" title="Read 'chrome.storage.local.clear()' in the Chrome developer docs">chrome.storage.local.clear()</a> 
+    <a href="#remove-items" class="anchor-link-icon" title="This feature mentioned in 'Drop all todo items'">&#8593;</a>
+  </li>
+</ul>
+
+<p>Ready to continue onto the next step? Go to <a href="app_codelab_alarms.html">Step 3 - Add alarms and notifications &raquo;</a></p>
+    
+    <footer id="cc-info">
+      <!--p class="last-updated">Last updated August 2, 2013.</p-->
+      <p class="cc-logo">Content available under the <a href="http://creativecommons.org/licenses/by/3.0/">CC-By 3.0 license</a></p>
+    </footer>
+  </div>
+</article>
+    </main>
+    </div>
+
+    <footer id="gc-footer" role="contentinfo">
+      <div class="g-section g-tpl-50-50 gc-container">
+        <div class="g-unit g-first">
+          <nav class="links">
+            <a href="https://www.google.com/">Google</a><a href="https://developers.google.com/site-terms">Terms of Service</a><a href="http://www.google.com/intl/en/privacy/">Privacy Policy</a><a href="http://crbug.com/new" data-feedback>Report a content bug</a>
+          </nav>
+        </div>
+        <div class="g-unit g-last">
+          <div id="social-buttons">
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../static/js/fatnav.js"></script>
+    <script src="../static/js/article.js"></script>
+    <script src="../static/js/prettify.js"></script>
+    <script src="../static/js/search.js"></script>
+    <script src="../../www.gstatic.com/feedback/api.js"></script>
+    <script src="../static/js/site.js"></script>
+  </body>
+
+<!-- Mirrored from developer.chrome.com/apps/app_codelab_import_todomvc by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jul 2020 09:23:30 GMT -->
+</html>

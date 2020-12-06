@@ -1,0 +1,2720 @@
+<!DOCTYPE html>
+<html>
+  
+<!-- Mirrored from developer.chrome.com/apps/usb by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jul 2020 10:55:07 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cleartype" content="on">
+    <link type="image/ico" rel="icon" href="../../www.google.com/images/icons/product/chrome-32.png">
+
+    <link href="../static/css/out/site.css" rel="stylesheet" type="text/css">
+    <link href="../static/css/print.css" rel="stylesheet" type="text/css" media="print">
+    <link href="../static/css/prettify.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41980257-1', 'auto');
+  ga('create', 'UA-49880327-5', {'name': 'chromeDocs'});
+  ga('send', 'pageview');
+  ga('chromeDocs.send', 'pageview');
+
+</script>
+
+    <title>chrome.usb - Google Chrome</title>
+  </head>
+
+  <body>
+    <div class="gc-container">
+    <a href="#gc-pagecontent" class="element-invisible element-focusable">Skip to main content</a>
+
+    <header id="topnav" role="banner">
+      <div id="logo">
+        <a href="../index.html">
+          <img alt="Chrome: developer" src="../static/images/chrome-logo_2x.png">
+        </a>
+        <span class="collase-icon"><!-- <img src="/static/images/burger-icon.png" class="collase-icon">--></span>
+      </div>
+      <nav id="fatnav" role="navigation">
+      <ul>
+          <li class="pillar">
+            <span class="toplevel">Chrome</span>
+            <ul class="expandee">
+                <li class="submenu">Extend the Browser
+                  <ul>
+                      <li class="category">
+                        <a href="../extensions.html">
+                        What are Extensions?
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/getstarted.html">
+                        Get Started Tutorial
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/overview.html">
+                        Overview
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/manifest.html">Manifest Format</a>
+                            </li>
+                            <li><a href="../extensions/background_pages.html">Manage Events</a>
+                            </li>
+                            <li><a href="../extensions/user_interface.html">Design User Interface</a>
+                            </li>
+                            <li><a href="../extensions/content_scripts.html">Content Scripts</a>
+                            </li>
+                            <li><a href="../extensions/permission_warnings.html">Declare Permissions and Warn Users</a>
+                            </li>
+                            <li><a href="../extensions/options.html">Give Users Options</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/devguide.html">
+                        Developer Guide
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/performance.html">Reach Peak Performance</a>
+                            </li>
+                            <li><a href="../extensions/user_privacy.html">Protect User Privacy</a>
+                            </li>
+                            <li><a href="../extensions/security.html">Stay Secure</a>
+                            </li>
+                            <li><a href="../extensions/tut_debugging.html">Debugging</a>
+                            </li>
+                            <li><a href="../extensions/tut_oauth.html">OAuth</a>
+                            </li>
+                            <li><a href="../extensions/a11y.html">Accessibility</a>
+                            </li>
+                            <li><a href="../extensions/contentSecurityPolicy.html">Content Security Policy</a>
+                            </li>
+                            <li><a href="../extensions/xhr.html">Cross-Origin XHR</a>
+                            </li>
+                            <li><a href="../extensions/i18n.html">Internationalization</a>
+                            </li>
+                            <li><a href="../extensions/messaging.html">Message Passing</a>
+                            </li>
+                            <li><a href="../extensions/nativeMessaging.html">Native Messaging</a>
+                            </li>
+                            <li><a href="../extensions/match_patterns.html">Match Patterns</a>
+                            </li>
+                            <li><a href="../extensions/single_purpose.html">Extension Quality Guidelines FAQ</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/faq.html">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/faq.html">FAQ</a>
+                            </li>
+                            <li><a href="../extensions/whats_new.html">What's New?</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-extensions">Google Groups</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/tags/google-chrome-extension/info">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Web Store Publishing and Distribution
+                  <ul>
+                      <li class="category">
+                        <a href="../webstore.html">
+                        Distribution Overview
+                        </a>
+                        <ul>
+                            <li><a href="../webstore.html">Distributing Products Built for Chrome</a>
+                            </li>
+                            <li><a href="../webstore/about_webstore.html">What Is the Chrome Web Store?</a>
+                            </li>
+                            <li><a href="../webstore/overview.html">What Can You Publish?</a>
+                            </li>
+                            <li><a href="../webstore/get_started_simple.html">Tutorial: Getting Started</a>
+                            </li>
+                            <li><a href="../webstore/samples.html">Samples</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/hosting.html">
+                        Publish Extensions
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/hosting.html">Hosting and Updating</a>
+                            </li>
+                            <li><a href="../extensions/hosting_changes.html">Hosting Policy Changes</a>
+                            </li>
+                            <li><a href="../extensions/tut_analytics.html">Google Analytics</a>
+                            </li>
+                            <li><a href="../extensions/themes.html">Publishing Themes</a>
+                            </li>
+                            <li><a href="../extensions/external_extensions.html">Other Deployment Options</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/money.html">
+                        Monetizing
+                        </a>
+                        <ul>
+                            <li><a href="../webstore/money.html">Monetizing Your App</a>
+                            </li>
+                            <li><a href="../webstore/identify_user.html">Using Google Accounts</a>
+                            </li>
+                            <li><a href="../webstore/one_time_payments.html">One-Time Payments</a>
+                            </li>
+                            <li><a href="../webstore/pricing.html">Pricing</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/branding.html">
+                        Branding
+                        </a>
+                        <ul>
+                            <li><a href="../webstore/branding.html">Branding Guidelines</a>
+                            </li>
+                            <li><a href="../webstore/images.html">Supplying Images</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/best_practices.html">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../webstore/best_practices.html">Best Practices</a>
+                            </li>
+                            <li><a href="../webstore/faq.html">FAQ</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/questions/tagged/google-chrome-app">Stack Overflow</a>
+                            </li>
+                            <li><a href="../webstore/articles.html">Articles</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Mobile Chrome
+                  <ul>
+                      <li class="category">
+                        <a href="../multidevice.html">
+                        Chrome for a Multi-Device World
+                        </a>
+                        <ul>
+                            <li><a href="../multidevice/user-agent.html">User Agents</a>
+                            </li>
+                            <li><a href="../multidevice/android/customtabs.html">Chrome Custom Tabs</a>
+                            </li>
+                            <li><a href="https://developers.google.com/web/tools/chrome-devtools/iterate/device-mode/?utm_source=dcc&amp;utm_medium=redirect&amp;utm_campaign=2016q3">Mobile Emulation</a>
+                            </li>
+                            <li><a href="https://developers.google.com/web/tools/chrome-devtools/debug/remote-debugging/remote-debugging?utm_source=dcc&amp;utm_medium=redirect&amp;utm_campaign=2016q3">Remote Debugging</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/android/overview.html">
+                        Chrome for Android
+                        </a>
+                        <ul>
+                            <li><a href="../multidevice/android/overview.html">Overview</a>
+                            </li>
+                            <li><a href="../multidevice/android/intents.html">Android Intents with Chrome</a>
+                            </li>
+                            <li><a href="../multidevice/android/customtabs.html">Chrome Custom Tabs</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/webview/overview.html">
+                        Chrome WebView
+                        </a>
+                        <ul>
+                            <li><a href="../multidevice/webview/overview.html">WebView for Android</a>
+                            </li>
+                            <li><a href="../multidevice/webview/gettingstarted.html">Getting Started</a>
+                            </li>
+                            <li><a href="../multidevice/webview/pixelperfect.html">Pixel-Perfect UI</a>
+                            </li>
+                            <li><a href="../multidevice/webview/workflow.html">WebView Workflow</a>
+                            </li>
+                            <li><a href="../multidevice/webview/tipsandtricks.html">Tips &amp; Tricks</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/ios/links.html">
+                        Chrome for iOS
+                        </a>
+                        <ul>
+                            <li><a href="../multidevice/ios/links.html">Opening Links in Chrome</a>
+                            </li>
+                            <li><a href="../multidevice/user-agent.html#chrome_for_ios_user_agent">User Agent</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/faq.html">
+                        FAQ
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          <li class="pillar">
+            <span class="toplevel">Chrome OS</span>
+            <ul class="expandee">
+                <li class="submenu">Apps
+                  <ul>
+                      <li class="category">
+                        <a href="about_apps.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="about_apps.html">What Are Chrome Apps?</a>
+                            </li>
+                            <li><a href="../extensions/single_purpose.html">Extension Quality Guidelines FAQ</a>
+                            </li>
+                            <li><a href="first_app.html">Create Your First App</a>
+                            </li>
+                            <li><a href="app_architecture.html">App Architecture</a>
+                            </li>
+                            <li><a href="app_lifecycle.html">App Lifecycle</a>
+                            </li>
+                            <li><a href="contentSecurityPolicy.html">Content Security Policy</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="app_codelab_intro.html">
+                        Learn with Codelab
+                        </a>
+                        <ul>
+                            <li><a href="app_codelab_intro.html">Intro - Build Chrome App</a>
+                            </li>
+                            <li><a href="app_codelab_basics.html">1 - Create and run a Chrome App</a>
+                            </li>
+                            <li><a href="app_codelab_import_todomvc.html">2 - Import an existing web app</a>
+                            </li>
+                            <li><a href="app_codelab_alarms.html">3 - Add alarms and notifications</a>
+                            </li>
+                            <li><a href="app_codelab_webview.html">4 - Open external links with a webview</a>
+                            </li>
+                            <li><a href="app_codelab_images.html">5 - Add images from the web</a>
+                            </li>
+                            <li><a href="app_codelab_filesystem.html">6 - Export todos to the filesystem</a>
+                            </li>
+                            <li><a href="app_codelab_publish.html">7 - Publish your app</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="chrome_apps_on_mobile.html">
+                        Run Chrome Apps on Mobile
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="offline_apps.html">
+                        Develop in the Cloud
+                        </a>
+                        <ul>
+                            <li><a href="offline_apps.html">Offline First</a>
+                            </li>
+                            <li><a href="app_external.html">Handling External Content</a>
+                            </li>
+                            <li><a href="app_storage.html">Storing Data</a>
+                            </li>
+                            <li><a href="offline_storage.html">Managing Offline Storage</a>
+                            </li>
+                            <li><a href="nativeMessaging.html">Native Messaging</a>
+                            </li>
+                            <li><a href="richNotifications.html">Rich Notifications</a>
+                            </li>
+                            <li><a href="app_identity.html">User Authentication</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="app_usb.html">
+                        User Low-Level System Services
+                        </a>
+                        <ul>
+                            <li><a href="app_usb.html">USB</a>
+                            </li>
+                            <li><a href="app_serial.html">Serial</a>
+                            </li>
+                            <li><a href="app_network.html">Network Communications</a>
+                            </li>
+                            <li><a href="app_bluetooth.html">Bluetooth</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="app_frameworks.html">
+                        MVC Architecture &amp; Frameworks
+                        </a>
+                        <ul>
+                            <li><a href="app_frameworks.html">About MVC Architecture</a>
+                            </li>
+                            <li><a href="angular_framework.html">Build Apps with AngularJS</a>
+                            </li>
+                            <li><a href="sencha_framework.html">Build Apps with SenchaJS</a>
+                            </li>
+                            <li><a href="game_engines.html">Game Engines</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="publish_app.html">
+                        Distribute Apps
+                        </a>
+                        <ul>
+                            <li><a href="publish_app.html">Publish Your App</a>
+                            </li>
+                            <li><a href="../webstore/payments-iap.html">Monetize Your App</a>
+                            </li>
+                            <li><a href="../webstore/one_time_payments.html">One-Time Payments</a>
+                            </li>
+                            <li><a href="analytics.html">Analytics</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="manifest.html">
+                        Chrome Platform APIs
+                        </a>
+                        <ul>
+                            <li><a href="manifest.html">Manifest File Format</a>
+                            </li>
+                            <li><a href="tags/webview.html">Webview Tag</a>
+                            </li>
+                            <li><a href="tags/appview.html">Appview Tag</a>
+                            </li>
+                            <li><a href="api_other.html">Web APIs</a>
+                            </li>
+                            <li><a href="app_deprecated.html">Disabled Web Features</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="faq.html">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="faq.html">FAQ</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/questions/tagged/google-chrome-app">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Native Client
+                  <ul>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/native-client/overview">Technical Overview</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/nacl-and-pnacl">NaCl and PNaCl</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/migration">
+                        WebAssembly Migration Guide
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/sdk/download">
+                        Download the SDK
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/native-client/sdk/download">Download the Native Client SDK</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/sdk/examples">Examples</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/sdk/release-notes">Release Notes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/devguide/tutorial/tutorial-part1">
+                        Tutorial
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/tutorial/tutorial-part1">Part 1: Simple PNaCl Web App</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/tutorial/tutorial-part2">Part 2: SDK Build System and Chrome Apps</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/cds2014">Chrome Dev Summit 2014 - Codelabs</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/devguide/devcycle/building">
+                        Development Cycle
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/devcycle/building">Building</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/devcycle/running">Running</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/devcycle/debugging">Debugging</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/devcycle/vs-addin">Debugging with Visual Studio</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/devcycle/dynamic-loading">Dynamic Linking and Loading with GlibC</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/devguide/coding/application-structure">
+                        Coding Your Application
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/application-structure">Application Structure</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/native-client-modules">Native Client Modules</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/3D-graphics">3D Graphics</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/audio">Audio</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/file-io">File I/O</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/nacl_io">The nacl_io Library</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/message-system">Messaging System</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/progress-events">Progress Events</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/url-loading">URL Loading</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/view-focus-input-events">View Change, Focus, &amp; Input Events</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/devguide/distributing">
+                        Distribute Your Apps
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/c-api">
+                        Pepper API Reference
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/native-client/c-api">Pepper C API (Stable)</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/cpp-api">Pepper C++ API (Stable)</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/c-api-beta">Pepper C API (Beta)</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/cpp-api-beta">Pepper C++ API (Beta)</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/c-api-dev">Pepper C API (Dev)</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/cpp-api-dev">Pepper C++ API (Dev)</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/glossary">
+                        Additional Reference &amp; Versions
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/native-client/glossary">Glossary</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/reference/ideas">Contributor Ideas</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/reference/nacl-manifest-format">Native Client Manifest (nmf) Format</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/reference/pnacl-bitcode-manual">Contents of PNaCl Bitcode Files</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/reference/pnacl-bitcode-abi">PNaCl Bitcode Reference Manual</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/reference/pnacl-undefined-behavior">PNaCl Undefined Behavior</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/reference/pnacl-c-cpp-language-support">PNaCl C/C++ Language Support</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/reference/sandbox_internals/index">Sandbox Internals</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/reference/design-docs">Design Documents</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/native-client/faq">FAQ</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/help">Forums &amp; Issues Tracker</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/publications-and-presentations">Publications &amp; Presentations</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/community/security-contest/index">Security Contest Archive</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          <li class="pillar">
+            <span class="toplevel">Chrome APIs</span>
+            <ul class="expandee">
+                <li class="submenu">Extensions APIs
+                  <ul>
+                      <li class="category">
+                        <a href="../extensions/api_index.html">
+                        Extension APIs
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Apps APIs
+                  <ul>
+                      <li class="category">
+                        <a href="api_index.html">
+                        Apps APIs
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+        <li id="search">
+          <img src="../static/images/search.png">
+          <div class="expandee">
+      
+      <!-- override search styles set globally by site.css -->
+      <style>
+      .gsc-above-wrapper-area, .gsc-result-info {
+        font-size: 11px;
+      }
+      .gs-webResult div, .gs-result div {
+        line-height: initial;
+      }
+      .gs-webResult a, .gs-result a {
+        text-decoration: none;
+      }
+      td.gcsc-branding-img-noclear, .gcsc-branding-img-noclear a {
+        width: 51px;
+        height: 15px;
+        vertical-align: top;
+      }
+      .gsc-table-result, .gsc-thumbnail-inside, .gsc-url-top {
+        padding: 0;
+      }
+      .gsc-control-cse tr, .gsc-control-cse td, .gsc-control-cse th {
+       padding: inherit;
+       border: none;
+      }
+      .gsc-control-cse {
+        white-space: normal;
+        border: none;
+        padding: 0 1em;
+      }
+      #search .gsc-control-cse img {
+        height: inherit;
+        width: inherit;
+      }
+      .gsc-control-cse table {
+        margin: initial;
+      }
+      .gsc-control-cse * {
+        box-sizing: initial;
+        -webkit-box-sizing: initial;
+        -moz-box-sizing: initial;
+      }
+      #fatnav .expandee .gsc-control-cse a {
+       padding: 0;
+       color: inherit;
+      }
+      </style>
+      
+            <form id="chrome-docs-cse-search-form" action="https://google.com/cse">
+              <input type="search" id="chrome-docs-cse-input" name="q" placeholder="What are you looking for?">
+              <input type="hidden" name="cx" value="010997258251033819707:7owyldxmpkc" />
+              <input type="hidden" name="ie" value="UTF-8" />
+            </form>
+            <gcse:searchresults-only gname="results"></gcse:searchresults-only>
+          </div>
+        </li>
+      </ul>
+      </nav>
+          </header>
+
+    <main id="gc-pagecontent" role="main">
+
+
+<article>
+  <div itemprop="articleBody" class="api">
+    <h1>chrome.usb</h1>
+    <table class="intro" id="intro">
+      <tr>
+        <td class="title">Description:</td>
+        <td>
+             Use the <code>chrome.usb</code> API to interact with connected USB
+             devices. This API provides access to USB operations from within the context
+             of an app. Using this API, apps can function as drivers for hardware devices.
+            
+             Errors generated by this API are reported by setting
+             <a href=runtime.html#property-lastError>runtime.lastError</a> and executing the function's regular callback. The
+             callback's regular parameters will be undefined in this case.
+                    <br>
+        </td>
+      </tr>
+      <tr>
+        <td class="title">Availability:</td>
+        <td>
+            Since Chrome 35.
+            <br>
+        </td>
+      </tr>
+      <tr>
+        <td class="title">Permissions:</td>
+        <td>
+            <span class="code">
+            "usb"
+                    </span>
+            <br>
+        </td>
+      </tr>
+      <tr>
+        <td class="title">Learn More:</td>
+        <td>
+            <a href="app_usb.html">
+            Accessing Hardware Devices
+                    </a>
+            <br>
+        </td>
+      </tr>
+    </table>
+    <section id="toc">
+    <h2>Summary</h2>
+    <table class="api-summary">
+      <tr>
+        <tr><th colspan="2">Types</th></tr>
+          <tr><td><a href="#type-Direction">Direction</a></td></tr>
+          <tr><td><a href="#type-Device">Device</a></td></tr>
+          <tr><td><a href="#type-ConnectionHandle">ConnectionHandle</a></td></tr>
+          <tr><td><a href="#type-EndpointDescriptor">EndpointDescriptor</a></td></tr>
+          <tr><td><a href="#type-InterfaceDescriptor">InterfaceDescriptor</a></td></tr>
+          <tr><td><a href="#type-ConfigDescriptor">ConfigDescriptor</a></td></tr>
+          <tr><td><a href="#type-GenericTransferInfo">GenericTransferInfo</a></td></tr>
+          <tr><td><a href="#type-TransferResultInfo">TransferResultInfo</a></td></tr>
+          <tr><td><a href="#type-DeviceFilter">DeviceFilter</a></td></tr>
+        <tr><th colspan="2">Methods</th></tr>
+        <tr><td><a href="#method-getDevices">getDevices</a> &minus;
+            <code class="prettyprint">
+            chrome.usb.getDevices(<span>object options</span>, <span>function callback</span>)
+            </code>
+          </td></tr>
+        <tr><td><a href="#method-getUserSelectedDevices">getUserSelectedDevices</a> &minus;
+            <code class="prettyprint">
+            chrome.usb.getUserSelectedDevices(<span>object options</span>, <span>function callback</span>)
+            </code>
+          </td></tr>
+        <tr><td><a href="#method-getConfigurations">getConfigurations</a> &minus;
+            <code class="prettyprint">
+            chrome.usb.getConfigurations(<span>    Device device</span>, <span>function callback</span>)
+            </code>
+          </td></tr>
+        <tr><td><a href="#method-requestAccess">requestAccess</a> &minus;
+            <code class="prettyprint">
+            chrome.usb.requestAccess(<span>    Device device</span>, <span>integer interfaceId</span>, <span>function callback</span>)
+            </code>
+          </td></tr>
+        <tr><td><a href="#method-openDevice">openDevice</a> &minus;
+            <code class="prettyprint">
+            chrome.usb.openDevice(<span>    Device device</span>, <span>function callback</span>)
+            </code>
+          </td></tr>
+        <tr><td><a href="#method-findDevices">findDevices</a> &minus;
+            <code class="prettyprint">
+            chrome.usb.findDevices(<span>object options</span>, <span>function callback</span>)
+            </code>
+          </td></tr>
+        <tr><td><a href="#method-closeDevice">closeDevice</a> &minus;
+            <code class="prettyprint">
+            chrome.usb.closeDevice(<span>    ConnectionHandle handle</span>, <span class="optional">function callback</span>)
+            </code>
+          </td></tr>
+        <tr><td><a href="#method-setConfiguration">setConfiguration</a> &minus;
+            <code class="prettyprint">
+            chrome.usb.setConfiguration(<span>    ConnectionHandle handle</span>, <span>integer configurationValue</span>, <span>function callback</span>)
+            </code>
+          </td></tr>
+        <tr><td><a href="#method-getConfiguration">getConfiguration</a> &minus;
+            <code class="prettyprint">
+            chrome.usb.getConfiguration(<span>    ConnectionHandle handle</span>, <span>function callback</span>)
+            </code>
+          </td></tr>
+        <tr><td><a href="#method-listInterfaces">listInterfaces</a> &minus;
+            <code class="prettyprint">
+            chrome.usb.listInterfaces(<span>    ConnectionHandle handle</span>, <span>function callback</span>)
+            </code>
+          </td></tr>
+        <tr><td><a href="#method-claimInterface">claimInterface</a> &minus;
+            <code class="prettyprint">
+            chrome.usb.claimInterface(<span>    ConnectionHandle handle</span>, <span>integer interfaceNumber</span>, <span>function callback</span>)
+            </code>
+          </td></tr>
+        <tr><td><a href="#method-releaseInterface">releaseInterface</a> &minus;
+            <code class="prettyprint">
+            chrome.usb.releaseInterface(<span>    ConnectionHandle handle</span>, <span>integer interfaceNumber</span>, <span>function callback</span>)
+            </code>
+          </td></tr>
+        <tr><td><a href="#method-setInterfaceAlternateSetting">setInterfaceAlternateSetting</a> &minus;
+            <code class="prettyprint">
+            chrome.usb.setInterfaceAlternateSetting(<span>    ConnectionHandle handle</span>, <span>integer interfaceNumber</span>, <span>integer alternateSetting</span>, <span>function callback</span>)
+            </code>
+          </td></tr>
+        <tr><td><a href="#method-controlTransfer">controlTransfer</a> &minus;
+            <code class="prettyprint">
+            chrome.usb.controlTransfer(<span>    ConnectionHandle handle</span>, <span>object transferInfo</span>, <span>function callback</span>)
+            </code>
+          </td></tr>
+        <tr><td><a href="#method-bulkTransfer">bulkTransfer</a> &minus;
+            <code class="prettyprint">
+            chrome.usb.bulkTransfer(<span>    ConnectionHandle handle</span>, <span>    GenericTransferInfo transferInfo</span>, <span>function callback</span>)
+            </code>
+          </td></tr>
+        <tr><td><a href="#method-interruptTransfer">interruptTransfer</a> &minus;
+            <code class="prettyprint">
+            chrome.usb.interruptTransfer(<span>    ConnectionHandle handle</span>, <span>    GenericTransferInfo transferInfo</span>, <span>function callback</span>)
+            </code>
+          </td></tr>
+        <tr><td><a href="#method-isochronousTransfer">isochronousTransfer</a> &minus;
+            <code class="prettyprint">
+            chrome.usb.isochronousTransfer(<span>    ConnectionHandle handle</span>, <span>object transferInfo</span>, <span>function callback</span>)
+            </code>
+          </td></tr>
+        <tr><td><a href="#method-resetDevice">resetDevice</a> &minus;
+            <code class="prettyprint">
+            chrome.usb.resetDevice(<span>    ConnectionHandle handle</span>, <span>function callback</span>)
+            </code>
+          </td></tr>
+        <tr><th colspan="2">Events</th></tr>
+          <tr><td><a href="#event-onDeviceAdded">onDeviceAdded</a></td></tr>
+          <tr><td><a href="#event-onDeviceRemoved">onDeviceRemoved</a></td></tr>
+    </table>
+    </section>
+    <section>
+      <div class="api-reference">
+          <h2 id="types">Types</h2>
+            <div>
+              <h3 id="type-Direction">Direction</h3>
+              <table>
+                <tr><th>Enum</th></tr>
+                <tr><td>
+                        <code>"in"</code>, 
+                        or <code>"out"</code>
+                </td></tr>
+                <dd>Direction, Recipient, RequestType, and TransferType all map to their namesakes within the USB specification.</dd>
+              </table>
+            </div>
+            <div>
+              <h3 id="type-Device">Device</h3>
+              <table>
+                  <tr><th colspan="3" id="Device-properties">properties</th></tr>
+                  <tr id="property-Device-device">
+                    <td>integer</td>
+                    <td>
+                        device</td>
+                    <td>
+                    
+                    <p>
+                      An opaque ID for the USB device. It remains unchanged until the device is unplugged.
+                    </p></td>
+                  </tr><tr id="property-Device-vendorId">
+                    <td>integer</td>
+                    <td>
+                        vendorId</td>
+                    <td>
+                    
+                    <p>
+                      The device vendor ID.
+                    </p></td>
+                  </tr><tr id="property-Device-productId">
+                    <td>integer</td>
+                    <td>
+                        productId</td>
+                    <td>
+                    
+                    <p>
+                      The product ID.
+                    </p></td>
+                  </tr><tr id="property-Device-version">
+                    <td>integer</td>
+                    <td>
+                        version</td>
+                    <td>
+                    <p class="availability">
+                      Since Chrome 51.
+                    </p>
+                    
+                    <p>
+                      The device version (bcdDevice field).
+                    </p></td>
+                  </tr><tr id="property-Device-productName">
+                    <td>string</td>
+                    <td>
+                        productName</td>
+                    <td>
+                    <p class="availability">
+                      Since Chrome 46.
+                    </p>
+                    
+                    <p>
+                      The iProduct string read from the device, if available.
+                    </p></td>
+                  </tr><tr id="property-Device-manufacturerName">
+                    <td>string</td>
+                    <td>
+                        manufacturerName</td>
+                    <td>
+                    <p class="availability">
+                      Since Chrome 46.
+                    </p>
+                    
+                    <p>
+                      The iManufacturer string read from the device, if available.
+                    </p></td>
+                  </tr><tr id="property-Device-serialNumber">
+                    <td>string</td>
+                    <td>
+                        serialNumber</td>
+                    <td>
+                    <p class="availability">
+                      Since Chrome 46.
+                    </p>
+                    
+                    <p>
+                      The iSerialNumber string read from the device, if available.
+                    </p></td>
+                  </tr>
+              </table>
+            </div>
+            <div>
+              <h3 id="type-ConnectionHandle">ConnectionHandle</h3>
+              <table>
+                  <tr><th colspan="3" id="ConnectionHandle-properties">properties</th></tr>
+                  <tr id="property-ConnectionHandle-handle">
+                    <td>integer</td>
+                    <td>
+                        handle</td>
+                    <td>
+                    
+                    <p>
+                      An opaque handle representing this connection to the USB device and all associated claimed interfaces and pending transfers. A new handle is created each time the device is opened. The connection handle is different from <a href=usb.html#property-Device-device>Device.device</a>.
+                    </p></td>
+                  </tr><tr id="property-ConnectionHandle-vendorId">
+                    <td>integer</td>
+                    <td>
+                        vendorId</td>
+                    <td>
+                    
+                    <p>
+                      The device vendor ID.
+                    </p></td>
+                  </tr><tr id="property-ConnectionHandle-productId">
+                    <td>integer</td>
+                    <td>
+                        productId</td>
+                    <td>
+                    
+                    <p>
+                      The product ID.
+                    </p></td>
+                  </tr>
+              </table>
+            </div>
+            <div>
+              <h3 id="type-EndpointDescriptor">EndpointDescriptor</h3>
+              <table>
+                  <tr><th colspan="3" id="EndpointDescriptor-properties">properties</th></tr>
+                  <tr id="property-EndpointDescriptor-address">
+                    <td>integer</td>
+                    <td>
+                        address</td>
+                    <td>
+                    
+                    <p>
+                      Endpoint address.
+                    </p></td>
+                  </tr><tr id="property-EndpointDescriptor-type">
+                    <td>enum of    <code>"control"</code>,    <code>"interrupt"</code>,    <code>"isochronous"</code>,    or <code>"bulk"</code></td>
+                    <td>
+                        type</td>
+                    <td>
+                    
+                    <p>
+                      Transfer type.
+                    </p></td>
+                  </tr><tr id="property-EndpointDescriptor-direction">
+                    <td>    <a href=usb.html#type-Direction>Direction</a></td>
+                    <td>
+                        direction</td>
+                    <td>
+                    
+                    <p>
+                      Transfer direction.
+                    </p></td>
+                  </tr><tr id="property-EndpointDescriptor-maximumPacketSize">
+                    <td>integer</td>
+                    <td>
+                        maximumPacketSize</td>
+                    <td>
+                    
+                    <p>
+                      Maximum packet size.
+                    </p></td>
+                  </tr><tr id="property-EndpointDescriptor-synchronization">
+                    <td>enum of    <code>"asynchronous"</code>,    <code>"adaptive"</code>,    or <code>"synchronous"</code></td>
+                    <td><span class="optional">(optional)</span>
+                        synchronization</td>
+                    <td>
+                    
+                    <p>
+                      Transfer synchronization mode (isochronous only).
+                    </p></td>
+                  </tr><tr id="property-EndpointDescriptor-usage">
+                    <td>enum of    <code>"data"</code>,    <code>"feedback"</code>,    <code>"explicitFeedback"</code>,    <code>"periodic"</code>,    or <code>"notification"</code></td>
+                    <td><span class="optional">(optional)</span>
+                        usage</td>
+                    <td>
+                    
+                    <p>
+                      Endpoint usage hint.
+                    </p></td>
+                  </tr><tr id="property-EndpointDescriptor-pollingInterval">
+                    <td>integer</td>
+                    <td><span class="optional">(optional)</span>
+                        pollingInterval</td>
+                    <td>
+                    
+                    <p>
+                      Polling interval (interrupt and isochronous only).
+                    </p></td>
+                  </tr><tr id="property-EndpointDescriptor-extra_data">
+                    <td>ArrayBuffer</td>
+                    <td>
+                        extra_data</td>
+                    <td>
+                    <p class="availability">
+                      Since Chrome 39.
+                    </p>
+                    
+                    <p>
+                      Extra descriptor data associated with this endpoint.
+                    </p></td>
+                  </tr>
+              </table>
+            </div>
+            <div>
+              <h3 id="type-InterfaceDescriptor">InterfaceDescriptor</h3>
+              <table>
+                  <tr><th colspan="3" id="InterfaceDescriptor-properties">properties</th></tr>
+                  <tr id="property-InterfaceDescriptor-interfaceNumber">
+                    <td>integer</td>
+                    <td>
+                        interfaceNumber</td>
+                    <td>
+                    
+                    <p>
+                      The interface number.
+                    </p></td>
+                  </tr><tr id="property-InterfaceDescriptor-alternateSetting">
+                    <td>integer</td>
+                    <td>
+                        alternateSetting</td>
+                    <td>
+                    
+                    <p>
+                      The interface alternate setting number (defaults to <code>0</code).
+                    </p></td>
+                  </tr><tr id="property-InterfaceDescriptor-interfaceClass">
+                    <td>integer</td>
+                    <td>
+                        interfaceClass</td>
+                    <td>
+                    
+                    <p>
+                      The USB interface class.
+                    </p></td>
+                  </tr><tr id="property-InterfaceDescriptor-interfaceSubclass">
+                    <td>integer</td>
+                    <td>
+                        interfaceSubclass</td>
+                    <td>
+                    
+                    <p>
+                      The USB interface sub-class.
+                    </p></td>
+                  </tr><tr id="property-InterfaceDescriptor-interfaceProtocol">
+                    <td>integer</td>
+                    <td>
+                        interfaceProtocol</td>
+                    <td>
+                    
+                    <p>
+                      The USB interface protocol.
+                    </p></td>
+                  </tr><tr id="property-InterfaceDescriptor-description">
+                    <td>string</td>
+                    <td><span class="optional">(optional)</span>
+                        description</td>
+                    <td>
+                    
+                    <p>
+                      Description of the interface.
+                    </p></td>
+                  </tr><tr id="property-InterfaceDescriptor-endpoints">
+                    <td>array of     <a href=usb.html#type-EndpointDescriptor>EndpointDescriptor</a></td>
+                    <td>
+                        endpoints</td>
+                    <td>
+                    
+                    <p>
+                      Available endpoints.
+                    </p></td>
+                  </tr><tr id="property-InterfaceDescriptor-extra_data">
+                    <td>ArrayBuffer</td>
+                    <td>
+                        extra_data</td>
+                    <td>
+                    <p class="availability">
+                      Since Chrome 39.
+                    </p>
+                    
+                    <p>
+                      Extra descriptor data associated with this interface.
+                    </p></td>
+                  </tr>
+              </table>
+            </div>
+            <div>
+              <h3 id="type-ConfigDescriptor">ConfigDescriptor</h3>
+              <p class="availability">
+                Since Chrome 39.
+              </p>
+              <table>
+                  <tr><th colspan="3" id="ConfigDescriptor-properties">properties</th></tr>
+                  <tr id="property-ConfigDescriptor-active">
+                    <td>boolean</td>
+                    <td>
+                        active</td>
+                    <td>
+                    <p class="availability">
+                      Since Chrome 47.
+                    </p>
+                    
+                    <p>
+                      Is this the active configuration?
+                    </p></td>
+                  </tr><tr id="property-ConfigDescriptor-configurationValue">
+                    <td>integer</td>
+                    <td>
+                        configurationValue</td>
+                    <td>
+                    
+                    <p>
+                      The configuration number.
+                    </p></td>
+                  </tr><tr id="property-ConfigDescriptor-description">
+                    <td>string</td>
+                    <td><span class="optional">(optional)</span>
+                        description</td>
+                    <td>
+                    
+                    <p>
+                      Description of the configuration.
+                    </p></td>
+                  </tr><tr id="property-ConfigDescriptor-selfPowered">
+                    <td>boolean</td>
+                    <td>
+                        selfPowered</td>
+                    <td>
+                    
+                    <p>
+                      The device is self-powered.
+                    </p></td>
+                  </tr><tr id="property-ConfigDescriptor-remoteWakeup">
+                    <td>boolean</td>
+                    <td>
+                        remoteWakeup</td>
+                    <td>
+                    
+                    <p>
+                      The device supports remote wakeup.
+                    </p></td>
+                  </tr><tr id="property-ConfigDescriptor-maxPower">
+                    <td>integer</td>
+                    <td>
+                        maxPower</td>
+                    <td>
+                    
+                    <p>
+                      The maximum power needed by this device in milliamps (mA).
+                    </p></td>
+                  </tr><tr id="property-ConfigDescriptor-interfaces">
+                    <td>array of     <a href=usb.html#type-InterfaceDescriptor>InterfaceDescriptor</a></td>
+                    <td>
+                        interfaces</td>
+                    <td>
+                    
+                    <p>
+                      Available interfaces.
+                    </p></td>
+                  </tr><tr id="property-ConfigDescriptor-extra_data">
+                    <td>ArrayBuffer</td>
+                    <td>
+                        extra_data</td>
+                    <td>
+                    
+                    <p>
+                      Extra descriptor data associated with this configuration.
+                    </p></td>
+                  </tr>
+              </table>
+            </div>
+            <div>
+              <h3 id="type-GenericTransferInfo">GenericTransferInfo</h3>
+              <table>
+                  <tr><th colspan="3" id="GenericTransferInfo-properties">properties</th></tr>
+                  <tr id="property-GenericTransferInfo-direction">
+                    <td>    <a href=usb.html#type-Direction>Direction</a></td>
+                    <td>
+                        direction</td>
+                    <td>
+                    
+                    <p>
+                      The transfer direction (<code>"in"</code> or <code>"out"</code>).
+                    </p></td>
+                  </tr><tr id="property-GenericTransferInfo-endpoint">
+                    <td>integer</td>
+                    <td>
+                        endpoint</td>
+                    <td>
+                    
+                    <p>
+                      The target endpoint address. The interface containing this endpoint must be claimed.
+                    </p></td>
+                  </tr><tr id="property-GenericTransferInfo-length">
+                    <td>integer</td>
+                    <td><span class="optional">(optional)</span>
+                        length</td>
+                    <td>
+                    
+                    <p>
+                      The maximum number of bytes to receive (required only by input transfers).
+                    </p></td>
+                  </tr><tr id="property-GenericTransferInfo-data">
+                    <td>ArrayBuffer</td>
+                    <td><span class="optional">(optional)</span>
+                        data</td>
+                    <td>
+                    
+                    <p>
+                      The data to transmit (required only by output transfers).
+                    </p></td>
+                  </tr><tr id="property-GenericTransferInfo-timeout">
+                    <td>integer</td>
+                    <td><span class="optional">(optional)</span>
+                        timeout</td>
+                    <td>
+                    <p class="availability">
+                      Since Chrome 43.
+                    </p>
+                    
+                    <p>
+                      Request timeout (in milliseconds). The default value <code>0</code> indicates no timeout.
+                    </p></td>
+                  </tr>
+              </table>
+            </div>
+            <div>
+              <h3 id="type-TransferResultInfo">TransferResultInfo</h3>
+              <table>
+                  <tr><th colspan="3" id="TransferResultInfo-properties">properties</th></tr>
+                  <tr id="property-TransferResultInfo-resultCode">
+                    <td>integer</td>
+                    <td><span class="optional">(optional)</span>
+                        resultCode</td>
+                    <td>
+                    
+                    <p>
+                      A value of <code>0</code> indicates that the transfer was a success. Other values indicate failure.
+                    </p></td>
+                  </tr><tr id="property-TransferResultInfo-data">
+                    <td>ArrayBuffer</td>
+                    <td><span class="optional">(optional)</span>
+                        data</td>
+                    <td>
+                    
+                    <p>
+                      The data returned by an input transfer. <code>undefined</code> for output transfers.
+                    </p></td>
+                  </tr>
+              </table>
+            </div>
+            <div>
+              <h3 id="type-DeviceFilter">DeviceFilter</h3>
+              <p class="availability">
+                Since Chrome 39.
+              </p>
+              <table>
+                  <tr><th colspan="3" id="DeviceFilter-properties">properties</th></tr>
+                  <tr id="property-DeviceFilter-vendorId">
+                    <td>integer</td>
+                    <td><span class="optional">(optional)</span>
+                        vendorId</td>
+                    <td>
+                    
+                    <p>
+                      Device vendor ID.
+                    </p></td>
+                  </tr><tr id="property-DeviceFilter-productId">
+                    <td>integer</td>
+                    <td><span class="optional">(optional)</span>
+                        productId</td>
+                    <td>
+                    
+                    <p>
+                      Device product ID, checked only if the vendor ID matches.
+                    </p></td>
+                  </tr><tr id="property-DeviceFilter-interfaceClass">
+                    <td>integer</td>
+                    <td><span class="optional">(optional)</span>
+                        interfaceClass</td>
+                    <td>
+                    
+                    <p>
+                      USB interface class, matches any interface on the device.
+                    </p></td>
+                  </tr><tr id="property-DeviceFilter-interfaceSubclass">
+                    <td>integer</td>
+                    <td><span class="optional">(optional)</span>
+                        interfaceSubclass</td>
+                    <td>
+                    
+                    <p>
+                      USB interface sub-class, checked only if the interface class matches.
+                    </p></td>
+                  </tr><tr id="property-DeviceFilter-interfaceProtocol">
+                    <td>integer</td>
+                    <td><span class="optional">(optional)</span>
+                        interfaceProtocol</td>
+                    <td>
+                    
+                    <p>
+                      USB interface protocol, checked only if the interface sub-class matches.
+                    </p></td>
+                  </tr>
+              </table>
+            </div>
+          <h2 id="methods">Methods</h2>
+            <div>
+              <h3
+                  id="method-getDevices"
+                  >getDevices
+              </h3>
+              <div class="summary">
+              <code class="prettyprint">
+              chrome.usb.getDevices(<span>object options</span>, <span>function callback</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  Enumerates connected USB devices.
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr id="property-getDevices-options">
+                      <td>object</td>
+                      <td>
+                          options</td>
+                      <td>
+                      
+                      <p>
+                        The properties to search for on target devices.
+                      </p>  <table class="innerTable">
+                          <tr id="property-options-vendorId">
+                            <td>integer</td>
+                            <td><span class="optional">(optional)</span>
+                                vendorId</td>
+                            <td>
+                            <p class="availability">
+                              <strong>Deprecated</strong> since Chrome 39.
+                                Equivalent to setting <a href=usb.html#property-DeviceFilter-vendorId>DeviceFilter.vendorId</a>.
+                            </p>
+                            
+                            </td>
+                          </tr><tr id="property-options-productId">
+                            <td>integer</td>
+                            <td><span class="optional">(optional)</span>
+                                productId</td>
+                            <td>
+                            <p class="availability">
+                              <strong>Deprecated</strong> since Chrome 39.
+                                Equivalent to setting <a href=usb.html#property-DeviceFilter-productId>DeviceFilter.productId</a>.
+                            </p>
+                            
+                            </td>
+                          </tr><tr id="property-options-filters">
+                            <td>array of     <a href=usb.html#type-DeviceFilter>DeviceFilter</a></td>
+                            <td><span class="optional">(optional)</span>
+                                filters</td>
+                            <td>
+                            <p class="availability">
+                              Since Chrome 39.
+                            </p>
+                            
+                            <p>
+                              A device matching any given filter will be returned. An empty filter list will return all devices the app has permission for.
+                            </p></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr id="property-getDevices-callback">
+                      <td>function</td>
+                      <td>
+                          callback</td>
+                      <td>
+                      
+                          <p>
+                              The <em>callback</em> parameter should be a function
+                              that looks like this:
+                          </p>
+                        <code class="prettyprint">function(array of     <a href=usb.html#type-Device>Device</a> devices) <span class="subdued">{...}</span>;</code>
+                          <table class="innerTable">
+                            <tr id="property-callback-devices">
+                              <td>array of     <a href=usb.html#type-Device>Device</a></td>
+                              <td>
+                                  devices</td>
+                              <td>
+                              
+                              </td>
+                            </tr>
+                          </table>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-getUserSelectedDevices"
+                  >getUserSelectedDevices
+              </h3>
+              <div class="summary">
+              <code class="prettyprint">
+              chrome.usb.getUserSelectedDevices(<span>object options</span>, <span>function callback</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p class="availability">
+                  Since Chrome 40.
+                </p>
+                <p>
+                  Presents a device picker to the user and returns the <a href=usb.html#type-Device>Device</a>s selected. If the user cancels the picker devices will be empty. A user gesture is required for the dialog to display. Without a user gesture, the callback will run as though the user cancelled.
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr id="property-getUserSelectedDevices-options">
+                      <td>object</td>
+                      <td>
+                          options</td>
+                      <td>
+                      
+                      <p>
+                        Configuration of the device picker dialog box.
+                      </p>  <table class="innerTable">
+                          <tr id="property-options-multiple">
+                            <td>boolean</td>
+                            <td><span class="optional">(optional)</span>
+                                multiple</td>
+                            <td>
+                            
+                            <p>
+                              Allow the user to select multiple devices.
+                            </p></td>
+                          </tr><tr id="property-options-filters">
+                            <td>array of     <a href=usb.html#type-DeviceFilter>DeviceFilter</a></td>
+                            <td><span class="optional">(optional)</span>
+                                filters</td>
+                            <td>
+                            
+                            <p>
+                              Filter the list of devices presented to the user. If multiple filters are provided devices matching any filter will be displayed.
+                            </p></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr id="property-getUserSelectedDevices-callback">
+                      <td>function</td>
+                      <td>
+                          callback</td>
+                      <td>
+                      
+                      <p>
+                        Invoked with a list of chosen <a href=usb.html#type-Device>Device</a>s.
+                      </p>    <p>
+                              The <em>callback</em> parameter should be a function
+                              that looks like this:
+                          </p>
+                        <code class="prettyprint">function(array of     <a href=usb.html#type-Device>Device</a> devices) <span class="subdued">{...}</span>;</code>
+                          <table class="innerTable">
+                            <tr id="property-callback-devices">
+                              <td>array of     <a href=usb.html#type-Device>Device</a></td>
+                              <td>
+                                  devices</td>
+                              <td>
+                              
+                              </td>
+                            </tr>
+                          </table>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-getConfigurations"
+                  >getConfigurations
+              </h3>
+              <div class="summary">
+              <code class="prettyprint">
+              chrome.usb.getConfigurations(<span>    <a href=usb.html#type-Device>Device</a> device</span>, <span>function callback</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p class="availability">
+                  Since Chrome 47.
+                </p>
+                <p>
+                  Returns the full set of device configuration descriptors.
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr id="property-getConfigurations-device">
+                      <td>    <a href=usb.html#type-Device>Device</a></td>
+                      <td>
+                          device</td>
+                      <td>
+                      
+                      <p>
+                        The <a href=usb.html#type-Device>Device</a> to fetch descriptors from.
+                      </p></td>
+                    </tr>
+                    <tr id="property-getConfigurations-callback">
+                      <td>function</td>
+                      <td>
+                          callback</td>
+                      <td>
+                      
+                          <p>
+                              The <em>callback</em> parameter should be a function
+                              that looks like this:
+                          </p>
+                        <code class="prettyprint">function(array of     <a href=usb.html#type-ConfigDescriptor>ConfigDescriptor</a> configs) <span class="subdued">{...}</span>;</code>
+                          <table class="innerTable">
+                            <tr id="property-callback-configs">
+                              <td>array of     <a href=usb.html#type-ConfigDescriptor>ConfigDescriptor</a></td>
+                              <td>
+                                  configs</td>
+                              <td>
+                              
+                              </td>
+                            </tr>
+                          </table>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-requestAccess"
+                  >requestAccess
+              </h3>
+              <div class="summary">
+              <code class="prettyprint">
+              chrome.usb.requestAccess(<span>    <a href=usb.html#type-Device>Device</a> device</span>, <span>integer interfaceId</span>, <span>function callback</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p class="availability">
+                  <strong>Deprecated</strong> since Chrome 40.
+                    This function was Chrome OS specific and calling it on other
+                        platforms would fail. This operation is now implicitly performed as part of
+                        <a href=usb.html#method-openDevice>openDevice</a> and this function will return <code>true</code> on all
+                        platforms.
+                </p>
+                <p>
+                  Requests access from the permission broker to a device claimed by Chrome OS if the given interface on the device is not claimed.
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr id="property-requestAccess-device">
+                      <td>    <a href=usb.html#type-Device>Device</a></td>
+                      <td>
+                          device</td>
+                      <td>
+                      
+                      <p>
+                        The <a href=usb.html#type-Device>Device</a> to request access to.
+                      </p></td>
+                    </tr>
+                    <tr id="property-requestAccess-interfaceId">
+                      <td>integer</td>
+                      <td>
+                          interfaceId</td>
+                      <td>
+                      
+                      <p>
+                        The particular interface requested.
+                      </p></td>
+                    </tr>
+                    <tr id="property-requestAccess-callback">
+                      <td>function</td>
+                      <td>
+                          callback</td>
+                      <td>
+                      
+                          <p>
+                              The <em>callback</em> parameter should be a function
+                              that looks like this:
+                          </p>
+                        <code class="prettyprint">function(boolean success) <span class="subdued">{...}</span>;</code>
+                          <table class="innerTable">
+                            <tr id="property-callback-success">
+                              <td>boolean</td>
+                              <td>
+                                  success</td>
+                              <td>
+                              
+                              </td>
+                            </tr>
+                          </table>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-openDevice"
+                  >openDevice
+              </h3>
+              <div class="summary">
+              <code class="prettyprint">
+              chrome.usb.openDevice(<span>    <a href=usb.html#type-Device>Device</a> device</span>, <span>function callback</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  Opens a USB device returned by <a href=usb.html#method-getDevices>getDevices</a>.
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr id="property-openDevice-device">
+                      <td>    <a href=usb.html#type-Device>Device</a></td>
+                      <td>
+                          device</td>
+                      <td>
+                      
+                      <p>
+                        The <a href=usb.html#type-Device>Device</a> to open.
+                      </p></td>
+                    </tr>
+                    <tr id="property-openDevice-callback">
+                      <td>function</td>
+                      <td>
+                          callback</td>
+                      <td>
+                      
+                          <p>
+                              The <em>callback</em> parameter should be a function
+                              that looks like this:
+                          </p>
+                        <code class="prettyprint">function(    <a href=usb.html#type-ConnectionHandle>ConnectionHandle</a> handle) <span class="subdued">{...}</span>;</code>
+                          <table class="innerTable">
+                            <tr id="property-callback-handle">
+                              <td>    <a href=usb.html#type-ConnectionHandle>ConnectionHandle</a></td>
+                              <td>
+                                  handle</td>
+                              <td>
+                              
+                              </td>
+                            </tr>
+                          </table>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-findDevices"
+                  >findDevices
+              </h3>
+              <div class="summary">
+              <code class="prettyprint">
+              chrome.usb.findDevices(<span>object options</span>, <span>function callback</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  <p>Finds USB devices specified by the vendor, product and (optionally) interface IDs and if permissions allow opens them for use.</p><p>If the access request is rejected or the device fails to be opened a connection handle will not be created or returned.</p><p>Calling this method is equivalent to calling <a href=usb.html#method-getDevices>getDevices</a> followed by <a href=usb.html#method-openDevice>openDevice</a> for each device.</p>
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr id="property-findDevices-options">
+                      <td>object</td>
+                      <td>
+                          options</td>
+                      <td>
+                      
+                      <p>
+                        The properties to search for on target devices.
+                      </p>  <table class="innerTable">
+                          <tr id="property-options-vendorId">
+                            <td>integer</td>
+                            <td>
+                                vendorId</td>
+                            <td>
+                            
+                            <p>
+                              The device vendor ID.
+                            </p></td>
+                          </tr><tr id="property-options-productId">
+                            <td>integer</td>
+                            <td>
+                                productId</td>
+                            <td>
+                            
+                            <p>
+                              The product ID.
+                            </p></td>
+                          </tr><tr id="property-options-interfaceId">
+                            <td>integer</td>
+                            <td><span class="optional">(optional)</span>
+                                interfaceId</td>
+                            <td>
+                            
+                            <p>
+                              The interface ID to request access to. Only available on Chrome OS. It has no effect on other platforms.
+                            </p></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr id="property-findDevices-callback">
+                      <td>function</td>
+                      <td>
+                          callback</td>
+                      <td>
+                      
+                          <p>
+                              The <em>callback</em> parameter should be a function
+                              that looks like this:
+                          </p>
+                        <code class="prettyprint">function(array of     <a href=usb.html#type-ConnectionHandle>ConnectionHandle</a> handles) <span class="subdued">{...}</span>;</code>
+                          <table class="innerTable">
+                            <tr id="property-callback-handles">
+                              <td>array of     <a href=usb.html#type-ConnectionHandle>ConnectionHandle</a></td>
+                              <td>
+                                  handles</td>
+                              <td>
+                              
+                              </td>
+                            </tr>
+                          </table>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-closeDevice"
+                  >closeDevice
+              </h3>
+              <div class="summary">
+              <code class="prettyprint">
+              chrome.usb.closeDevice(<span>    <a href=usb.html#type-ConnectionHandle>ConnectionHandle</a> handle</span>, <span class="optional">function callback</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  Closes a connection handle. Invoking operations on a handle after it has been closed is a safe operation but causes no action to be taken.
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr id="property-closeDevice-handle">
+                      <td>    <a href=usb.html#type-ConnectionHandle>ConnectionHandle</a></td>
+                      <td>
+                          handle</td>
+                      <td>
+                      
+                      <p>
+                        The <a href=usb.html#type-ConnectionHandle>ConnectionHandle</a> to close.
+                      </p></td>
+                    </tr>
+                    <tr id="property-closeDevice-callback">
+                      <td>function</td>
+                      <td><span class="optional">(optional)</span>
+                          callback</td>
+                      <td>
+                      
+                          <p>
+                              If you specify the <em>callback</em> parameter, it should
+                              be a function that looks like this:
+                          </p>
+                        <code class="prettyprint">function() <span class="subdued">{...}</span>;</code>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-setConfiguration"
+                  >setConfiguration
+              </h3>
+              <div class="summary">
+              <code class="prettyprint">
+              chrome.usb.setConfiguration(<span>    <a href=usb.html#type-ConnectionHandle>ConnectionHandle</a> handle</span>, <span>integer configurationValue</span>, <span>function callback</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p class="availability">
+                  Since Chrome 42.
+                </p>
+                <p>
+                  <p>Select a device configuration.</p><p>This function effectively resets the device by selecting one of the device's available configurations. Only configuration values greater than <code>0</code> are valid however some buggy devices have a working configuration <code>0</code> and so this value is allowed.</p>
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr id="property-setConfiguration-handle">
+                      <td>    <a href=usb.html#type-ConnectionHandle>ConnectionHandle</a></td>
+                      <td>
+                          handle</td>
+                      <td>
+                      <p class="availability">
+                        Since Chrome 41.
+                      </p>
+                      
+                      <p>
+                        An open connection to the device.
+                      </p></td>
+                    </tr>
+                    <tr id="property-setConfiguration-configurationValue">
+                      <td>integer</td>
+                      <td>
+                          configurationValue</td>
+                      <td>
+                      <p class="availability">
+                        Since Chrome 41.
+                      </p>
+                      
+                      </td>
+                    </tr>
+                    <tr id="property-setConfiguration-callback">
+                      <td>function</td>
+                      <td>
+                          callback</td>
+                      <td>
+                      
+                          <p>
+                              The <em>callback</em> parameter should be a function
+                              that looks like this:
+                          </p>
+                        <code class="prettyprint">function() <span class="subdued">{...}</span>;</code>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-getConfiguration"
+                  >getConfiguration
+              </h3>
+              <div class="summary">
+              <code class="prettyprint">
+              chrome.usb.getConfiguration(<span>    <a href=usb.html#type-ConnectionHandle>ConnectionHandle</a> handle</span>, <span>function callback</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p class="availability">
+                  Since Chrome 39.
+                </p>
+                <p>
+                  Gets the configuration descriptor for the currently selected configuration.
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr id="property-getConfiguration-handle">
+                      <td>    <a href=usb.html#type-ConnectionHandle>ConnectionHandle</a></td>
+                      <td>
+                          handle</td>
+                      <td>
+                      
+                      <p>
+                        An open connection to the device.
+                      </p></td>
+                    </tr>
+                    <tr id="property-getConfiguration-callback">
+                      <td>function</td>
+                      <td>
+                          callback</td>
+                      <td>
+                      
+                          <p>
+                              The <em>callback</em> parameter should be a function
+                              that looks like this:
+                          </p>
+                        <code class="prettyprint">function(    <a href=usb.html#type-ConfigDescriptor>ConfigDescriptor</a> config) <span class="subdued">{...}</span>;</code>
+                          <table class="innerTable">
+                            <tr id="property-callback-config">
+                              <td>    <a href=usb.html#type-ConfigDescriptor>ConfigDescriptor</a></td>
+                              <td>
+                                  config</td>
+                              <td>
+                              
+                              </td>
+                            </tr>
+                          </table>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-listInterfaces"
+                  >listInterfaces
+              </h3>
+              <div class="summary">
+              <code class="prettyprint">
+              chrome.usb.listInterfaces(<span>    <a href=usb.html#type-ConnectionHandle>ConnectionHandle</a> handle</span>, <span>function callback</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  Lists all interfaces on a USB device.
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr id="property-listInterfaces-handle">
+                      <td>    <a href=usb.html#type-ConnectionHandle>ConnectionHandle</a></td>
+                      <td>
+                          handle</td>
+                      <td>
+                      
+                      <p>
+                        An open connection to the device.
+                      </p></td>
+                    </tr>
+                    <tr id="property-listInterfaces-callback">
+                      <td>function</td>
+                      <td>
+                          callback</td>
+                      <td>
+                      
+                          <p>
+                              The <em>callback</em> parameter should be a function
+                              that looks like this:
+                          </p>
+                        <code class="prettyprint">function(array of     <a href=usb.html#type-InterfaceDescriptor>InterfaceDescriptor</a> descriptors) <span class="subdued">{...}</span>;</code>
+                          <table class="innerTable">
+                            <tr id="property-callback-descriptors">
+                              <td>array of     <a href=usb.html#type-InterfaceDescriptor>InterfaceDescriptor</a></td>
+                              <td>
+                                  descriptors</td>
+                              <td>
+                              
+                              </td>
+                            </tr>
+                          </table>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-claimInterface"
+                  >claimInterface
+              </h3>
+              <div class="summary">
+              <code class="prettyprint">
+              chrome.usb.claimInterface(<span>    <a href=usb.html#type-ConnectionHandle>ConnectionHandle</a> handle</span>, <span>integer interfaceNumber</span>, <span>function callback</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  <p>Claims an interface on a USB device. Before data can be transfered to an interface or associated endpoints the interface must be claimed. Only one connection handle can claim an interface at any given time. If the interface is already claimed, this call will fail.</p><p><a href=usb.html#method-releaseInterface>releaseInterface</a> should be called when the interface is no longer needed.</p>
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr id="property-claimInterface-handle">
+                      <td>    <a href=usb.html#type-ConnectionHandle>ConnectionHandle</a></td>
+                      <td>
+                          handle</td>
+                      <td>
+                      
+                      <p>
+                        An open connection to the device.
+                      </p></td>
+                    </tr>
+                    <tr id="property-claimInterface-interfaceNumber">
+                      <td>integer</td>
+                      <td>
+                          interfaceNumber</td>
+                      <td>
+                      
+                      <p>
+                        The interface to be claimed.
+                      </p></td>
+                    </tr>
+                    <tr id="property-claimInterface-callback">
+                      <td>function</td>
+                      <td>
+                          callback</td>
+                      <td>
+                      
+                          <p>
+                              The <em>callback</em> parameter should be a function
+                              that looks like this:
+                          </p>
+                        <code class="prettyprint">function() <span class="subdued">{...}</span>;</code>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-releaseInterface"
+                  >releaseInterface
+              </h3>
+              <div class="summary">
+              <code class="prettyprint">
+              chrome.usb.releaseInterface(<span>    <a href=usb.html#type-ConnectionHandle>ConnectionHandle</a> handle</span>, <span>integer interfaceNumber</span>, <span>function callback</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  Releases a claimed interface.
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr id="property-releaseInterface-handle">
+                      <td>    <a href=usb.html#type-ConnectionHandle>ConnectionHandle</a></td>
+                      <td>
+                          handle</td>
+                      <td>
+                      
+                      <p>
+                        An open connection to the device.
+                      </p></td>
+                    </tr>
+                    <tr id="property-releaseInterface-interfaceNumber">
+                      <td>integer</td>
+                      <td>
+                          interfaceNumber</td>
+                      <td>
+                      
+                      <p>
+                        The interface to be released.
+                      </p></td>
+                    </tr>
+                    <tr id="property-releaseInterface-callback">
+                      <td>function</td>
+                      <td>
+                          callback</td>
+                      <td>
+                      
+                          <p>
+                              The <em>callback</em> parameter should be a function
+                              that looks like this:
+                          </p>
+                        <code class="prettyprint">function() <span class="subdued">{...}</span>;</code>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-setInterfaceAlternateSetting"
+                  >setInterfaceAlternateSetting
+              </h3>
+              <div class="summary">
+              <code class="prettyprint">
+              chrome.usb.setInterfaceAlternateSetting(<span>    <a href=usb.html#type-ConnectionHandle>ConnectionHandle</a> handle</span>, <span>integer interfaceNumber</span>, <span>integer alternateSetting</span>, <span>function callback</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  Selects an alternate setting on a previously claimed interface.
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr id="property-setInterfaceAlternateSetting-handle">
+                      <td>    <a href=usb.html#type-ConnectionHandle>ConnectionHandle</a></td>
+                      <td>
+                          handle</td>
+                      <td>
+                      
+                      <p>
+                        An open connection to the device where this interface has been     claimed.
+                      </p></td>
+                    </tr>
+                    <tr id="property-setInterfaceAlternateSetting-interfaceNumber">
+                      <td>integer</td>
+                      <td>
+                          interfaceNumber</td>
+                      <td>
+                      
+                      <p>
+                        The interface to configure.
+                      </p></td>
+                    </tr>
+                    <tr id="property-setInterfaceAlternateSetting-alternateSetting">
+                      <td>integer</td>
+                      <td>
+                          alternateSetting</td>
+                      <td>
+                      
+                      <p>
+                        The alternate setting to configure.
+                      </p></td>
+                    </tr>
+                    <tr id="property-setInterfaceAlternateSetting-callback">
+                      <td>function</td>
+                      <td>
+                          callback</td>
+                      <td>
+                      
+                          <p>
+                              The <em>callback</em> parameter should be a function
+                              that looks like this:
+                          </p>
+                        <code class="prettyprint">function() <span class="subdued">{...}</span>;</code>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-controlTransfer"
+                  >controlTransfer
+              </h3>
+              <div class="summary">
+              <code class="prettyprint">
+              chrome.usb.controlTransfer(<span>    <a href=usb.html#type-ConnectionHandle>ConnectionHandle</a> handle</span>, <span>object transferInfo</span>, <span>function callback</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  <p>Performs a control transfer on the specified device.</p><p>Control transfers refer to either the device, an interface or an endpoint. Transfers to an interface or endpoint require the interface to be claimed.</p>
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr id="property-controlTransfer-handle">
+                      <td>    <a href=usb.html#type-ConnectionHandle>ConnectionHandle</a></td>
+                      <td>
+                          handle</td>
+                      <td>
+                      
+                      <p>
+                        An open connection to the device.
+                      </p></td>
+                    </tr>
+                    <tr id="property-controlTransfer-transferInfo">
+                      <td>object</td>
+                      <td>
+                          transferInfo</td>
+                      <td>
+                      
+                        <table class="innerTable">
+                          <tr id="property-transferInfo-direction">
+                            <td>    <a href=usb.html#type-Direction>Direction</a></td>
+                            <td>
+                                direction</td>
+                            <td>
+                            
+                            <p>
+                              The transfer direction (<code>"in"</code> or <code>"out"</code>).
+                            </p></td>
+                          </tr><tr id="property-transferInfo-recipient">
+                            <td>enum of    <code>"device"</code>,    <code>"interface"</code>,    <code>"endpoint"</code>,    or <code>"other"</code></td>
+                            <td>
+                                recipient</td>
+                            <td>
+                            
+                            <p>
+                              The transfer target. The target given by <code>index</code> must be claimed if <code>"interface"</code> or <code>"endpoint"</code>.
+                            </p></td>
+                          </tr><tr id="property-transferInfo-requestType">
+                            <td>enum of    <code>"standard"</code>,    <code>"class"</code>,    <code>"vendor"</code>,    or <code>"reserved"</code></td>
+                            <td>
+                                requestType</td>
+                            <td>
+                            
+                            <p>
+                              The request type.
+                            </p></td>
+                          </tr><tr id="property-transferInfo-request">
+                            <td>integer</td>
+                            <td>
+                                request</td>
+                            <td>
+                            
+                            <p>
+                              The <code>bRequest</code> field, see <i>Universal Serial Bus Specification Revision 1.1</i> &sect; 9.3.
+                            </p></td>
+                          </tr><tr id="property-transferInfo-value">
+                            <td>integer</td>
+                            <td>
+                                value</td>
+                            <td>
+                            
+                            <p>
+                              The <code>wValue</code> field, see <i>Ibid</i>.
+                            </p></td>
+                          </tr><tr id="property-transferInfo-index">
+                            <td>integer</td>
+                            <td>
+                                index</td>
+                            <td>
+                            
+                            <p>
+                              The <code>wIndex</code> field, see <i>Ibid</i>.
+                            </p></td>
+                          </tr><tr id="property-transferInfo-length">
+                            <td>integer</td>
+                            <td><span class="optional">(optional)</span>
+                                length</td>
+                            <td>
+                            
+                            <p>
+                              The maximum number of bytes to receive (required only by input transfers).
+                            </p></td>
+                          </tr><tr id="property-transferInfo-data">
+                            <td>ArrayBuffer</td>
+                            <td><span class="optional">(optional)</span>
+                                data</td>
+                            <td>
+                            
+                            <p>
+                              The data to transmit (required only by output transfers).
+                            </p></td>
+                          </tr><tr id="property-transferInfo-timeout">
+                            <td>integer</td>
+                            <td><span class="optional">(optional)</span>
+                                timeout</td>
+                            <td>
+                            <p class="availability">
+                              Since Chrome 43.
+                            </p>
+                            
+                            <p>
+                              Request timeout (in milliseconds). The default value <code>0</code> indicates no timeout.
+                            </p></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr id="property-controlTransfer-callback">
+                      <td>function</td>
+                      <td>
+                          callback</td>
+                      <td>
+                      
+                          <p>
+                              The <em>callback</em> parameter should be a function
+                              that looks like this:
+                          </p>
+                        <code class="prettyprint">function(    <a href=usb.html#type-TransferResultInfo>TransferResultInfo</a> info) <span class="subdued">{...}</span>;</code>
+                          <table class="innerTable">
+                            <tr id="property-callback-info">
+                              <td>    <a href=usb.html#type-TransferResultInfo>TransferResultInfo</a></td>
+                              <td>
+                                  info</td>
+                              <td>
+                              
+                              </td>
+                            </tr>
+                          </table>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-bulkTransfer"
+                  >bulkTransfer
+              </h3>
+              <div class="summary">
+              <code class="prettyprint">
+              chrome.usb.bulkTransfer(<span>    <a href=usb.html#type-ConnectionHandle>ConnectionHandle</a> handle</span>, <span>    <a href=usb.html#type-GenericTransferInfo>GenericTransferInfo</a> transferInfo</span>, <span>function callback</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  Performs a bulk transfer on the specified device.
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr id="property-bulkTransfer-handle">
+                      <td>    <a href=usb.html#type-ConnectionHandle>ConnectionHandle</a></td>
+                      <td>
+                          handle</td>
+                      <td>
+                      
+                      <p>
+                        An open connection to the device.
+                      </p></td>
+                    </tr>
+                    <tr id="property-bulkTransfer-transferInfo">
+                      <td>    <a href=usb.html#type-GenericTransferInfo>GenericTransferInfo</a></td>
+                      <td>
+                          transferInfo</td>
+                      <td>
+                      
+                      <p>
+                        The transfer parameters.
+                      </p></td>
+                    </tr>
+                    <tr id="property-bulkTransfer-callback">
+                      <td>function</td>
+                      <td>
+                          callback</td>
+                      <td>
+                      
+                          <p>
+                              The <em>callback</em> parameter should be a function
+                              that looks like this:
+                          </p>
+                        <code class="prettyprint">function(    <a href=usb.html#type-TransferResultInfo>TransferResultInfo</a> info) <span class="subdued">{...}</span>;</code>
+                          <table class="innerTable">
+                            <tr id="property-callback-info">
+                              <td>    <a href=usb.html#type-TransferResultInfo>TransferResultInfo</a></td>
+                              <td>
+                                  info</td>
+                              <td>
+                              
+                              </td>
+                            </tr>
+                          </table>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-interruptTransfer"
+                  >interruptTransfer
+              </h3>
+              <div class="summary">
+              <code class="prettyprint">
+              chrome.usb.interruptTransfer(<span>    <a href=usb.html#type-ConnectionHandle>ConnectionHandle</a> handle</span>, <span>    <a href=usb.html#type-GenericTransferInfo>GenericTransferInfo</a> transferInfo</span>, <span>function callback</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  Performs an interrupt transfer on the specified device.
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr id="property-interruptTransfer-handle">
+                      <td>    <a href=usb.html#type-ConnectionHandle>ConnectionHandle</a></td>
+                      <td>
+                          handle</td>
+                      <td>
+                      
+                      <p>
+                        An open connection to the device.
+                      </p></td>
+                    </tr>
+                    <tr id="property-interruptTransfer-transferInfo">
+                      <td>    <a href=usb.html#type-GenericTransferInfo>GenericTransferInfo</a></td>
+                      <td>
+                          transferInfo</td>
+                      <td>
+                      
+                      <p>
+                        The transfer parameters.
+                      </p></td>
+                    </tr>
+                    <tr id="property-interruptTransfer-callback">
+                      <td>function</td>
+                      <td>
+                          callback</td>
+                      <td>
+                      
+                          <p>
+                              The <em>callback</em> parameter should be a function
+                              that looks like this:
+                          </p>
+                        <code class="prettyprint">function(    <a href=usb.html#type-TransferResultInfo>TransferResultInfo</a> info) <span class="subdued">{...}</span>;</code>
+                          <table class="innerTable">
+                            <tr id="property-callback-info">
+                              <td>    <a href=usb.html#type-TransferResultInfo>TransferResultInfo</a></td>
+                              <td>
+                                  info</td>
+                              <td>
+                              
+                              </td>
+                            </tr>
+                          </table>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-isochronousTransfer"
+                  >isochronousTransfer
+              </h3>
+              <div class="summary">
+              <code class="prettyprint">
+              chrome.usb.isochronousTransfer(<span>    <a href=usb.html#type-ConnectionHandle>ConnectionHandle</a> handle</span>, <span>object transferInfo</span>, <span>function callback</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  Performs an isochronous transfer on the specific device.
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr id="property-isochronousTransfer-handle">
+                      <td>    <a href=usb.html#type-ConnectionHandle>ConnectionHandle</a></td>
+                      <td>
+                          handle</td>
+                      <td>
+                      
+                      <p>
+                        An open connection to the device.
+                      </p></td>
+                    </tr>
+                    <tr id="property-isochronousTransfer-transferInfo">
+                      <td>object</td>
+                      <td>
+                          transferInfo</td>
+                      <td>
+                      
+                        <table class="innerTable">
+                          <tr id="property-transferInfo-transferInfo">
+                            <td>    <a href=usb.html#type-GenericTransferInfo>GenericTransferInfo</a></td>
+                            <td>
+                                transferInfo</td>
+                            <td>
+                            
+                            <p>
+                              Transfer parameters. The transfer length or data buffer specified in this parameter block is split along <code>packetLength</code> boundaries to form the individual packets of the transfer.
+                            </p></td>
+                          </tr><tr id="property-transferInfo-packets">
+                            <td>integer</td>
+                            <td>
+                                packets</td>
+                            <td>
+                            
+                            <p>
+                              The total number of packets in this transfer.
+                            </p></td>
+                          </tr><tr id="property-transferInfo-packetLength">
+                            <td>integer</td>
+                            <td>
+                                packetLength</td>
+                            <td>
+                            
+                            <p>
+                              The length of each of the packets in this transfer.
+                            </p></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr id="property-isochronousTransfer-callback">
+                      <td>function</td>
+                      <td>
+                          callback</td>
+                      <td>
+                      
+                          <p>
+                              The <em>callback</em> parameter should be a function
+                              that looks like this:
+                          </p>
+                        <code class="prettyprint">function(    <a href=usb.html#type-TransferResultInfo>TransferResultInfo</a> info) <span class="subdued">{...}</span>;</code>
+                          <table class="innerTable">
+                            <tr id="property-callback-info">
+                              <td>    <a href=usb.html#type-TransferResultInfo>TransferResultInfo</a></td>
+                              <td>
+                                  info</td>
+                              <td>
+                              
+                              </td>
+                            </tr>
+                          </table>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-resetDevice"
+                  >resetDevice
+              </h3>
+              <div class="summary">
+              <code class="prettyprint">
+              chrome.usb.resetDevice(<span>    <a href=usb.html#type-ConnectionHandle>ConnectionHandle</a> handle</span>, <span>function callback</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  Tries to reset the USB device. If the reset fails, the given connection handle will be closed and the  USB device will appear to be disconnected then reconnected.  In this case <a href=usb.html#method-getDevices>getDevices</a> or <a href=usb.html#method-findDevices>findDevices</a> must be called again to acquire the device.
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr id="property-resetDevice-handle">
+                      <td>    <a href=usb.html#type-ConnectionHandle>ConnectionHandle</a></td>
+                      <td>
+                          handle</td>
+                      <td>
+                      
+                      <p>
+                        A connection handle to reset.
+                      </p></td>
+                    </tr>
+                    <tr id="property-resetDevice-callback">
+                      <td>function</td>
+                      <td>
+                          callback</td>
+                      <td>
+                      
+                          <p>
+                              The <em>callback</em> parameter should be a function
+                              that looks like this:
+                          </p>
+                        <code class="prettyprint">function(boolean success) <span class="subdued">{...}</span>;</code>
+                          <table class="innerTable">
+                            <tr id="property-callback-success">
+                              <td>boolean</td>
+                              <td>
+                                  success</td>
+                              <td>
+                              
+                              </td>
+                            </tr>
+                          </table>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+          <h2 id="events">Events</h2>
+            <div>
+              <h3 id="event-onDeviceAdded">onDeviceAdded</h3>
+              <div class="description">
+                <p class="availability">
+                  Since Chrome 42.
+                </p>
+            <p>
+                  Event generated when a device is added to the system. Events are only broadcast to apps and extensions that have permission to access the device. Permission may have been granted at install time, when the user accepted an optional permission (see <a href=permissions.html#method-request>permissions.request</a>), or through <a href=usb.html#method-getUserSelectedDevices>getUserSelectedDevices</a>.
+                </p>      <tr><td>
+                  <div>
+                    <h4
+                        title="">addListener
+                    </h4>
+                    <div class="summary">
+                    <code class="prettyprint">
+                    chrome.usb.onDeviceAdded.addListener(<span>function callback</span>)
+                    </code>
+                    </div>
+                    <div class="description">
+                      <table class="innerTable">
+                        <tr><th colspan="3">Parameters</th></tr>
+                          <tr id="property-onDeviceAdded-callback">
+                            <td>function</td>
+                            <td>
+                                callback</td>
+                            <td>
+                            
+                                <p>
+                                    The <em>callback</em> parameter should be a function
+                                    that looks like this:
+                                </p>
+                              <code class="prettyprint">function(    <a href=usb.html#type-Device>Device</a> device) <span class="subdued">{...}</span>;</code>
+                                <table class="innerTable">
+                                  <tr id="property-onDeviceAdded-device">
+                                    <td>    <a href=usb.html#type-Device>Device</a></td>
+                                    <td>
+                                        device</td>
+                                    <td>
+                                    <p class="availability">
+                                      Since Chrome 41.
+                                    </p>
+                                    
+                                    </td>
+                                  </tr>
+                                </table>
+                            </td>
+                          </tr>
+                      </table>
+                    </div>
+                  </div>
+                  </td></tr>
+              </div>
+            </div>
+            <div>
+              <h3 id="event-onDeviceRemoved">onDeviceRemoved</h3>
+              <div class="description">
+                <p class="availability">
+                  Since Chrome 42.
+                </p>
+            <p>
+                  Event generated when a device is removed from the system. See <a href=usb.html#event-onDeviceAdded>onDeviceAdded</a> for which events are delivered.
+                </p>      <tr><td>
+                  <div>
+                    <h4
+                        title="">addListener
+                    </h4>
+                    <div class="summary">
+                    <code class="prettyprint">
+                    chrome.usb.onDeviceRemoved.addListener(<span>function callback</span>)
+                    </code>
+                    </div>
+                    <div class="description">
+                      <table class="innerTable">
+                        <tr><th colspan="3">Parameters</th></tr>
+                          <tr id="property-onDeviceRemoved-callback">
+                            <td>function</td>
+                            <td>
+                                callback</td>
+                            <td>
+                            
+                                <p>
+                                    The <em>callback</em> parameter should be a function
+                                    that looks like this:
+                                </p>
+                              <code class="prettyprint">function(    <a href=usb.html#type-Device>Device</a> device) <span class="subdued">{...}</span>;</code>
+                                <table class="innerTable">
+                                  <tr id="property-onDeviceRemoved-device">
+                                    <td>    <a href=usb.html#type-Device>Device</a></td>
+                                    <td>
+                                        device</td>
+                                    <td>
+                                    <p class="availability">
+                                      Since Chrome 41.
+                                    </p>
+                                    
+                                    </td>
+                                  </tr>
+                                </table>
+                            </td>
+                          </tr>
+                      </table>
+                    </div>
+                  </div>
+                  </td></tr>
+              </div>
+            </div>
+      </div>
+    </section>
+  </div>
+</article>
+    </main>
+    </div>
+
+    <footer id="gc-footer" role="contentinfo">
+      <div class="g-section g-tpl-50-50 gc-container">
+        <div class="g-unit g-first">
+          <nav class="links">
+            <a href="https://www.google.com/">Google</a><a href="https://developers.google.com/site-terms">Terms of Service</a><a href="http://www.google.com/intl/en/privacy/">Privacy Policy</a><a href="http://crbug.com/new" data-feedback>Report a content bug</a>
+          </nav>
+        </div>
+        <div class="g-unit g-last">
+          <div id="social-buttons">
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../static/js/fatnav.js"></script>
+    <script src="../static/js/article.js"></script>
+    <script src="../static/js/prettify.js"></script>
+    <script src="../static/js/search.js"></script>
+    <script src="../../www.gstatic.com/feedback/api.js"></script>
+    <script src="../static/js/site.js"></script>
+  </body>
+
+<!-- Mirrored from developer.chrome.com/apps/usb by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jul 2020 10:55:07 GMT -->
+</html>
